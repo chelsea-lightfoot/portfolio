@@ -1,0 +1,23 @@
+{
+  "name": "test-website",
+  "version": "1.0.0",
+  "description": "Chelsea Lightfoot's UX/UI Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch resources/scss -o resources/css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chelsea-lightfoot/portfolio.git"
+  },
+  "author": "Chelsea Lightfoot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chelsea-lightfoot/portfolio/issues"
+  },
+  "homepage": "https://github.com/chelsea-lightfoot/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
