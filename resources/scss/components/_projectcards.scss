@@ -1,0 +1,31 @@
+#portfolio-cards {
+  .card {
+    &.dashboards {
+      background-image: url(../resources/images/dashboards.png);
+      height: 100px;
+      background-color: transparent;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+    }
+    &.empty-states {
+
+    }
+    &.filters {
+
+    }
+    &.product-details {
+
+    }
+    &.gachapon {
+
+    }
+    &.sw-website {
+
+    }
+
+    .card-text {
+
+    }
+  }
+}
