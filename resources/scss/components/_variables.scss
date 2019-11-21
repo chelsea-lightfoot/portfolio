@@ -1,10 +1,15 @@
 //$accent-color: #9e75af;
-//$text-color: #6b606c;
 
 $accent-color: #ff9100;
-$text-color: #4e5056;
+$dark-text-color: #4e5056;
+$light-text-color: #f8f8f8;
 $dark-background: #24272b;
+
 $display-font: 'Quicksand', sans-serif;
 $body-reg: 'Montserrat', sans-serif;
 $body-bold: 700;
+
+$base-space: 15px;
 $grid-size: 250px;
+$grid-gap: 20px;
+$grid-column-num: 4;

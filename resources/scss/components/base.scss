@@ -1,0 +1,63 @@
+body {
+  background-color: #f8f8f8;
+  margin: unset;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  //overflow: hidden;
+}
+
+section {
+  padding: 0 $base-space * 2;
+}
+
+main {
+  padding: $base-space * 4 0;
+  flex: 1;
+  section {
+    margin-bottom: $base-space * 8;
+    section {
+      padding: 0;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $dark-text-color;
+  font-family: $display-font;
+  margin: unset;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin-bottom: $base-space;
+}
+
+p, li {
+  font-size: 1rem;
+  font-family: $body-reg;
+  color: $dark-text-color;
+  margin: 0 0 $base-space * 2 0;
+}
+
+b {
+  font-family: $body-reg;
+  font-weight: $body-bold;
+}
+
+a {
+  font-family: $body-reg;
+  text-decoration: none;
+  color: $dark-text-color;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.material-icons {
+  font-size: 20px;
+}

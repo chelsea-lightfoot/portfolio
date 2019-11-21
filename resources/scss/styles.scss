@@ -1,55 +1,6 @@
 @import "components/variables";
-
-body {
-  margin: unset;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  //overflow: hidden;
-}
-
-main {
-  background-color: #f8f8f8;
-  padding: 60px 0;
-  flex: 1;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: $text-color;
-  font-family: $display-font;
-  margin: unset;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-p, li {
-  font-size: 1rem;
-  font-family: $body-reg;
-  color: $text-color;
-  margin: 0;
-}
-
-b {
-  font-family: $body-reg;
-  font-weight: $body-bold;
-}
-
-a {
-  font-family: $body-reg;
-  text-decoration: none;
-  color: $text-color;
-  &:hover {
-    color: $accent-color;
-  }
-}
-
-.material-icons {
-  font-size: 20px;
-}
-
-@import "components/header";
+@import "components/base";
+@import "components/header-footer";
 @import "components/projectcards";
 @import "components/about";
+@import "components/portfolio-item";

@@ -1,0 +1,80 @@
+#portfolio-item {
+
+  .top {
+    height: 100vh;
+    .full-image {
+      background-image: url(../images/dashboards.png);
+      background-color: transparent;
+      background-position: center center;
+      background-size: cover;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .problem {
+
+  }
+
+  .process {
+    #process-gallery {
+      display: grid;
+
+      grid-template-columns: repeat($grid-column-num, minmax($grid-size, 1fr));
+      grid-template-rows: repeat(1, $grid-size);
+      grid-gap: $grid-gap;
+
+      margin-bottom: $base-space * 2;
+      .item-card {
+        background-color: transparent;
+        background-position: center center;
+        background-size: cover;
+
+        &.item1 {
+          background-image: url(../images/dashboards.png);
+        }
+        &.item2 {
+          background-image: url(../images/dashboards.png);
+        }
+        &.item3 {
+          background-image: url(../images/dashboards.png);
+          grid-column: 3 / span 2;
+        }
+      }
+    }
+  }
+
+  .solution {
+    #solution-gallery {
+      display: grid;
+
+      grid-template-columns: repeat($grid-column-num, minmax($grid-size, 1fr));
+      grid-template-rows: repeat(3, $grid-size);
+      grid-gap: $grid-gap;
+
+      margin-bottom: $base-space * 2;
+      .item-card {
+        background-color: transparent;
+        background-position: center center;
+        background-size: cover;
+
+        &.item1 {
+          background-image: url(../images/dashboards.png);
+          grid-column: 1 / span $grid-column-num;
+          grid-row: 1 / span 2;
+        }
+        &.item2 {
+          background-image: url(../images/dashboards.png);
+          grid-column: 1 / span 3;
+          grid-row: 3;
+        }
+        &.item3 {
+          background-image: url(../images/dashboards.png);
+          grid-column: 4;
+          grid-row: 3;
+        }
+      }
+    }
+  }
+}
