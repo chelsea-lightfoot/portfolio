@@ -1,31 +1,56 @@
-#portfolio-cards {
+#portfolio-gallery {
+  padding: 0 30px;
+}
+
+.gallery-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax($grid-size, 1fr));
+  grid-template-rows: repeat(4, $grid-size);
+  grid-gap: 20px;
   .card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    background-color: transparent;
+    background-position: center center;
+    background-size: cover;
+
     &.dashboards {
-      background-image: url(../resources/images/dashboards.png);
-      height: 100px;
-      background-color: transparent;
-      background-position: center center;
-      background-size: cover;
-      position: relative;
+      background-image: url(../images/dashboards.png);
+
+      grid-column: 2 / span 2;
+      grid-row: 3 / span 2;
     }
     &.empty-states {
-
+      background-image: url(../images/empty-states.png);
     }
     &.filters {
-
+      background-image: url(../images/filters.png);
     }
     &.product-details {
+      background-image: url(../images/product-details.png);
 
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
     }
     &.gachapon {
-
+      background-image: url(../images/dashboards.png);
     }
     &.sw-website {
-
+      background-image: url(../images/dashboards.png);
     }
 
     .card-text {
+      flex: 1;
 
+      display: flex;
+      align-items: center;
+
+      background-color: grey;
+      padding: 30px 30px 30px 30px;
     }
   }
 }

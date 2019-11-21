@@ -1,3 +1,8 @@
-p {
-  color: $primary-color;
+.photo {
+  background-image: url(../images/dashboards.png);
+  background-color: transparent;
+  background-position: center center;
+  background-size: cover;
+
+  position: relative;
 }

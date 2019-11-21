@@ -1,64 +1,84 @@
+<!--TODO -->
+<!--
+Header styling
+Homepage styling
+About styling
+Item styling
+
+Viewport tags & mobile scss
+
+Self-hosting fonts
+-->
+
 <!DOCTYPE HTML>
-<html lang = "en">
+<html lang="en">
 <head>
     <title>basic.html</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
 </head>
 <body>
-<div id="nav">
-    <div class="name"><h1>Test Website</h1></div>
-</div>
-<div class="portfolio-cards">
-    <div class="card">
-        <div class="card-text">
-            <h3>Name of Project</h3>
+<header>
+    <section id="nav">
+        <div class="name"><a href="index.html"><h1>Test Website</h1></a></div>
+        <div class="nav-links">
+            <div class="links">
+                <a href="about.html">Nav 1</a>
+                <a href="/">Nav 2</a>
+            </div>
+            <div class="socials">
+                <a href="/">
+                    <i class="material-icons">
+                        favorite
+                    </i>
+                </a>
+                <a href="/">
+                    <i class="material-icons">
+                        grade
+                    </i>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-text">
-            <h3>Name of Project</h3>
+    </section>
+</header>
+<main>
+    <section id="portfolio-gallery">
+        <div class="gallery-cards">
+            <a href="portfolio-item.html" class="card product-details">
+                <div class="card-text">
+                    <p>Product 4 with an extra long name that might fit</p>
+                </div>
+            </a>
+            <a class="card empty-states">
+                <div class="card-text">
+                    <p>Product 2 with a medium name</p>
+                </div>
+            </a>
+            <a class="card filters">
+                <div class="card-text">
+                    <p>Product 3</p>
+                </div>
+            </a>
+            <a class="card dashboards">
+                <div class="card-text">
+                    <p>Product 1 Name</p>
+                </div>
+            </a>
+            <a class="card gachapon">
+                <div class="card-text">
+                    <p>Product 5</p>
+                </div>
+            </a>
+            <a class="card sw-website">
+                <div class="card-text">
+                    <p>Long long Product 6</p>
+                </div>
+            </a>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-text">
-            <h3>Name of Project</h3>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-text">
-            <h3>Name of Project</h3>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-text">
-            <h3>Name of Project</h3>
-        </div>
-    </div>
-</div>
-
-<div class="about">
-    <div class="my-photo"></div>
-    <div class="about-text">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Mauris non lobortis lacus.</b> Nullam lectus libero, congue eget dictum in, tincidunt in lorem. Nunc tempor suscipit turpis sed imperdiet. In posuere imperdiet urna, laoreet posuere purus commodo sed. Duis tempor, mauris vitae laoreet facilisis, risus augue cursus turpis, vitae faucibus nisl augue sed turpis. Pellentesque euismod scelerisque lectus ac dignissim. Sed hendrerit sodales eros, et faucibus dui laoreet id. Pellentesque varius mollis est, at sagittis eros pulvinar non. Cras sed eleifend ligula.</p>
-
-        <p>Integer luctus ut diam cursus dignissim. Maecenas tincidunt, quam eget fermentum facilisis, arcu ex ultricies lectus, a aliquam metus dui ut est. Cras at lacinia nisl. Integer egestas quam a justo auctor iaculis. Integer ut urna felis. Pellentesque convallis ligula at posuere semper.</p>
-
-        <p>Praesent at tempor dolor, sed luctus ante. Duis condimentum mauris eget lorem tincidunt auctor. Mauris mattis vulputate euismod. Praesent accumsan lobortis erat et venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <p>Aliquam bibendum condimentum orci varius cursus. Ut pretium, enim venenatis volutpat tempor, arcu ligula eleifend ipsum, a molestie ex sapien eget libero. Aenean eu eros risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse volutpat justo vel quam porta luctus. In hendrerit sit amet diam eu pulvinar. Phasellus consequat, tellus ullamcorper sodales porta, ipsum libero pharetra justo, a pretium turpis dolor eu tellus.<span class="hidden-text">Chelsea also finds speaking about herself in the third person unnerving.</span></p>
-    </div>
-    <!--<div class="about-text">-->
-        <!--<p>Chelsea Lightfoot graduated with a Bachelor of Fine Arts (BFA) focused in Graphic Design from Cal Poly San Luis Obispo in 2014. That same year she began working for The Point Collective &mdash; a small design firm owned by veteran designers Jaime Merz and Mandi Chase. As the first employee, Chelsea had the opportunity to learn from the lead designers and grow into an experienced designer with skills across web and print platforms. In 2017 she moved on to Inxeption as a UX / UI Designer where she has had the privilage to design for the application since its -ahem- inception.</p>-->
-
-        <!--<p>Chelsea has a wide breadth of skills ranging from graphic design for print to website development, but her passion lies in <b>UX / UI design</b>. She is happiest when she’s thinking about how to encourage positive user behavior. She tries to apply game design principles to even the most mundane features because she believes that even the most outwardly boring process can be improved with a bit of fun.</p>-->
-
-        <!--<p>She also enjoys front end development and she is well versed in HTML and CSS / SASS. She is currently working towards fluency in Javascript and she is enjoying every minute of it. Check out her recent project:-->
-        <!--DND GACHAPON (LINK).</p>-->
-
-        <!--<p>In her free time Chelsea likes to listen to podcasts, play video games (and analyze the design that went into them), dress in various Japanese street fashions, and experiment with resin casting. She aspires to one day become a foster for cats and kittens in need, and to care for feral colonies that need support. She envisions a future full of travel and animals of all shapes and sizes. <span class="hidden-text">Chelsea also finds speaking about herself in the third person unnerving.</span></p>-->
-    <!--</div>-->
-</div>
-
+    </section>
+</main>
 </body>
 </html>
