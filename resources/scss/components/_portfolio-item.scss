@@ -178,6 +178,10 @@
           &.item2 {
             background-image: url(../images/process/pf-sketch1.jpg);
           }
+          &.item3 {
+            background-image: url(../images/process/pf-flow.png);
+            grid-column: 3 / span 2;
+          }
         }
       }
     }

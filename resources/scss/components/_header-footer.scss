@@ -40,7 +40,9 @@
         margin-right: $base-space;
       }
       &.social-icon {
-        height: 20px;
+        svg {
+          width: 20px;
+        }
       }
     }
   }
