@@ -17,34 +17,29 @@
       background-size: cover;
 
       &.dashboards {
-        background-image: url(../images/dashboards.png);
+        background-image: url(../images/mocks/dash-prod-imc.png);
 
-        grid-column: 2 / span 2;
+        grid-column: 3 / span 2;
         grid-row: 3 / span 2;
       }
       &.empty-states {
-        background-image: url(../images/empty-states.png);
-      }
-      &.filters {
-        background-image: url(../images/filters.png);
+        background-image: url(../images/mocks/empty-prod-mb.png);
+        grid-column: 1;
+        grid-row: 3;
       }
       &.product-details {
-        background-image: url(../images/product-details.png);
+        background-image: url(../images/mocks/pf_all_bwsr.png);
 
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         grid-row: 1 / span 2;
       }
       &.zippy-logo {
-        background-image: url(../images/dashboards.png);
-      }
-      &.print-example {
-        background-image: url(../images/dashboards.png);
-      }
-      &.gachapon {
-        background-image: url(../images/dashboards.png);
+        background-image: url(../images/mocks/zippy_logo.png);
       }
       &.sw-website {
-        background-image: url(../images/dashboards.png);
+        background-image: url(../images/mocks/sw_web_imac.png);
+        grid-column: 2;
+        grid-row: 4;
       }
 
       .card-text {

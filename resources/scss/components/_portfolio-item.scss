@@ -78,3 +78,198 @@
     }
   }
 }
+
+#portfolio-item {
+  //todo change the grid spans of all solution items to best show off each set of images
+
+  &.dash {
+    .top {
+      .full-image {
+        background-image: url(../images/mocks/dash-prod-imc.png);
+      }
+    }
+
+    .process {
+      #process-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/process/dashes-sketch5.jpg);
+          }
+          &.item2 {
+            background-image: url(../images/process/dashes-sketch4.jpg);
+          }
+          &.item3 {
+            background-image: url(../images/process/dashes-sketch2.jpg);
+            grid-column: 3 / span 2;
+          }
+        }
+      }
+    }
+
+    .solution {
+      #solution-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/unmocked/dash-pl.png);
+            grid-column: 1 / span $grid-column-num;
+            grid-row: 1 / span 2;
+          }
+          &.item2 {
+            background-image: url(../images/mocks/dash-mobile.png);
+            grid-column: 1 / span 3;
+            grid-row: 3;
+          }
+          &.item3 {
+            background-image: url(../images/unmocked/dash-mgmt.png);
+            grid-column: 4;
+            grid-row: 3;
+          }
+          &.item4 {
+            background-image: url(../images/unmocked/dash-prod.png);
+            grid-column: 4;
+            grid-row: 3;
+          }
+        }
+      }
+    }
+  }
+  &.empty {
+    .top {
+      .full-image {
+        background-image: url(../images/mocks/empty-prod-mb.png);
+      }
+    }
+
+    .solution {
+      #solution-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/unmocked/empty_prod.png);
+            grid-column: 1 / span $grid-column-num;
+            grid-row: 1 / span 2;
+          }
+          &.item2 {
+            background-image: url(../images/unmocked/empty_market.png);
+            grid-column: 1 / span 3;
+            grid-row: 3;
+          }
+          &.item3 {
+            background-image: url(../images/unmocked/empty_vision.png);
+            grid-column: 4;
+            grid-row: 3;
+          }
+        }
+      }
+    }
+  }
+  &.pf {
+    .top {
+      .full-image {
+        background-image: url(../images/mocks/pf_all_bwsr.png);
+      }
+    }
+
+    .process {
+      #process-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/process/pf-sketch6.jpg);
+          }
+          &.item2 {
+            background-image: url(../images/process/pf-sketch1.jpg);
+          }
+        }
+      }
+    }
+
+    .solution {
+      #solution-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/mocks/pf_ov_bwsr.png);
+            grid-column: 1 / span $grid-column-num;
+            grid-row: 1 / span 2;
+          }
+          //todo PUT IN VIDEO
+          &.item2 {
+            background-image: url(../images/dashboards.png);
+            grid-column: 1 / span 3;
+            grid-row: 3;
+          }
+          &.item3 {
+            background-image: url(../images/mocks/pf_ov_mobile.png);
+            grid-column: 4;
+            grid-row: 3;
+          }
+        }
+      }
+    }
+  }
+  &.sw {
+    .top {
+      .full-image {
+        background-image: url(../images/mocks/sw_web_imac.png);
+      }
+    }
+
+    .process {
+      #process-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/process/website_old.png);
+          }
+          &.item2 {
+            background-image: url(../images/process/sw_logo_ALL.png);
+          }
+        }
+      }
+    }
+
+    .solution {
+      #solution-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/mocks/sw_logo.png);
+            grid-column: 1 / span $grid-column-num;
+            grid-row: 1 / span 2;
+          }
+          &.item2 {
+            background-image: url(../images/mocks/sw_edit_bwsr.png);
+            grid-column: 1 / span 3;
+            grid-row: 3;
+          }
+          &.item3 {
+            background-image: url(../images/unmocked/sw_home3.png);
+            grid-column: 4;
+            grid-row: 3;
+          }
+        }
+      }
+    }
+  }
+  &.zippy {
+    .top {
+      .full-image {
+        background-image: url(../images/mocks/zippy_logo.png);
+      }
+    }
+
+    .process {
+      #process-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/process/zippy-process.png);
+          }
+          &.item2 {
+            background-image: url(../images/process/zippy-sketch1.jpg);
+            //background-image: url(../images/process/zippy-sketch2.jpg);
+          }
+          &.item3 {
+            background-image: url(../images/process/zippy-sketch3.jpg);
+            grid-column: 3 / span 2;
+          }
+        }
+      }
+    }
+  }
+}

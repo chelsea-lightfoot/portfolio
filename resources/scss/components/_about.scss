@@ -13,17 +13,17 @@
       background-size: cover;
 
       &.photo1 {
-        background-image: url(../images/dashboards.png);
+        background-image: url(../images/pax-portrait.jpg);
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
       }
       &.photo2 {
-        background-image: url(../images/dashboards.png);
+        background-image: url(../images/hawaii-hike.jpg);
         grid-column: 3;
         grid-row: 1;
       }
       &.photo3 {
-        background-image: url(../images/dashboards.png);
+        background-image: url(../images/family-photo.jpg);
         grid-column: 4;
         grid-row: 2;
       }
