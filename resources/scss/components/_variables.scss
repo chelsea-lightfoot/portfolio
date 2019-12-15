@@ -1,16 +1,19 @@
 $accent-color: #9e75af;
 $accent2: #ecb931;
-//$accent-color: #ff9100;
+$base-font-size: 1rem;
 
-$dark-text-color: #4e5056;
-$light-text-color: #f8f8f8;
 $dark-background: #24272b;
+$light-background: #f8f8f8;
+$dark-text-color: #4e5056;
+$light-text-color: $light-background;
+$card-background: rgba(147, 66, 181, .7);
 
 $display-font: 'Quicksand', sans-serif;
 $body-reg: 'Montserrat', sans-serif;
 $body-bold: 700;
+$text-width: 90%;
 
-$base-space: 15px;
-$grid-size: 250px;
+$base-space: 30px;
+$grid-size: 200px;
 $grid-gap: 20px;
-$grid-column-num: 4;
+$grid-column-num: auto-fill;

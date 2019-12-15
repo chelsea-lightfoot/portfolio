@@ -4,8 +4,10 @@
     display: grid;
 
     grid-template-columns: repeat($grid-column-num, minmax($grid-size, 1fr));
-    grid-template-rows: repeat(4, $grid-size);
+    grid-auto-rows: $grid-size;
     grid-gap: $grid-gap;
+    grid-auto-flow: dense;
+
     .card {
       position: relative;
       display: flex;
@@ -16,44 +18,80 @@
       background-position: center center;
       background-size: cover;
 
+      box-shadow: 2px 2px 5px #b4a1bd;
+      transition: box-shadow .45s;
+
+      &.large {
+        grid-column: span 2;
+        grid-row: span 2;
+        .card-overlay {
+          .card-text {
+            h4 {
+              font-size: $base-font-size * 1.875;
+            }
+          }
+        }
+      }
+
       &.dashboards {
         background-image: url(../images/mocks/dash-prod-imc.png);
-
-        grid-column: 3 / span 2;
-        grid-row: 3 / span 2;
       }
       &.empty-states {
         background-image: url(../images/mocks/empty-prod-mb.png);
-        grid-column: 1;
-        grid-row: 3;
       }
       &.product-details {
         background-image: url(../images/mocks/pf_all_bwsr.png);
-
-        grid-column: 1 / span 3;
-        grid-row: 1 / span 2;
       }
       &.zippy-logo {
         background-image: url(../images/mocks/zippy_logo.png);
       }
       &.sw-website {
         background-image: url(../images/mocks/sw_web_imac.png);
-        grid-column: 2;
-        grid-row: 4;
       }
 
-      .card-text {
-        flex: 1;
+      .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $card-background;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
 
         display: flex;
         align-items: center;
 
-        background-color: grey;
-        padding: $base-space * 2;
+        .card-text {
+          flex: 1;
 
-        p {
-          color: $light-text-color;
-          margin: 0;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          padding: $base-space;
+
+          p {
+            font-family: $display-font;
+            color: $light-text-color;
+            font-size: $base-font-size * 0.875;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+          }
+          h4 {
+            font-family: $body-reg;
+            color: $light-text-color;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: $base-font-size * 1.25;
+          }
+        }
+      }
+      &:hover {
+        box-shadow: 4px 4px 8px #c4bbc7;
+        .card-overlay {
+          height: 100%;
         }
       }
     }

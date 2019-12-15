@@ -1,31 +1,54 @@
 #about {
+  background-image: linear-gradient(-170deg, $light-background 15%, $accent-color 10%, $accent-color 40%, $light-background 40%);
+  margin-top: -280px;
+  padding-top: 280px;
+
+  div {
+    section {
+      &:first-child {
+        h2, p {
+          color: $light-text-color;
+        }
+      }
+    }
+  }
+
   #photo-gallery {
     display: grid;
 
     grid-template-columns: repeat($grid-column-num, minmax($grid-size, 1fr));
-    grid-template-rows: repeat(2, $grid-size);
+    grid-auto-rows: $grid-size;
     grid-gap: $grid-gap;
+    grid-auto-flow: dense;
 
     margin-bottom: $base-space * 2;
+
     .photo-card {
       background-color: transparent;
       background-position: center center;
       background-size: cover;
 
+      box-shadow: 2px 2px 5px #5e5861;
+
+      &.large {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
       &.photo1 {
         background-image: url(../images/pax-portrait.jpg);
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
+        background-position: 100% 10%;
+        background-size: 120%;
       }
       &.photo2 {
         background-image: url(../images/hawaii-hike.jpg);
-        grid-column: 3;
-        grid-row: 2;
+        background-position: 90% 70%;
+        background-size: 230%;
       }
       &.photo3 {
         background-image: url(../images/family-photo.jpg);
-        grid-column: 4;
-        grid-row: 1;
+        background-position: 100% 10%;
+        background-size: 110%;
       }
     }
   }
@@ -33,8 +56,23 @@
   h2 {
     margin-bottom: $base-space;
   }
-  p {
-    margin-bottom: $base-space * 2;
-  }
 
+}
+
+#resume {
+  background-image: linear-gradient(-170deg, $light-background 24%, $accent-color 10%, $accent-color 70%, $light-background 40%);
+  margin-top: -130px;
+  padding-top: 130px;
+  margin-bottom: 0;
+  .download-link {
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    a {
+      font-size: $base-font-size * 2.25;
+      color: $light-text-color;
+      font-family: $display-font;
+    }
+  }
 }
