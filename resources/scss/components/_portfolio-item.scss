@@ -1,23 +1,48 @@
 #portfolio-item {
-
   .top {
-    height: 100vh;
+    margin: 0;
+    h2 {
+      font-size: 2.5rem;
+      max-width: unset;
+    }
     .full-image {
       background-image: url(../images/dashboards.png);
       background-color: transparent;
       background-position: center center;
       background-size: cover;
+      height: 500px;
+
+      box-shadow: 2px 2px 5px #b4a1bd;
 
       width: 100%;
-      height: 100%;
     }
   }
 
   .problem {
+    background-image: linear-gradient(-190deg, rgba(248,248,248,0) 24%, #9e75af 10%, #9e75af 70%, rgba(248,248,248,0) 40%);
+    height: 380px;
+    margin: {
+      top: 50px;
+      left: -30px;
+      right: -30px;
+    }
+    padding: {
+      top: 470px;
+      left: 30px;
+      right: 30px;
+    }
 
+    h2 {
+      margin-top: -160px;
+      color: #f8f8f8;
+    }
+    p {
+      color: #f8f8f8;
+    }
   }
 
   .process {
+    margin-top: -360px;
     #process-gallery {
       display: grid;
 
@@ -30,6 +55,8 @@
         background-color: transparent;
         background-position: center center;
         background-size: cover;
+
+        box-shadow: 2px 2px 5px #5e5861;
 
         &.item1 {
           background-image: url(../images/dashboards.png);
@@ -59,6 +86,8 @@
         background-position: center center;
         background-size: cover;
 
+        box-shadow: 2px 2px 5px #b4a1bd;
+
         &.item1 {
           background-image: url(../images/dashboards.png);
           grid-column: 1 / span $grid-column-num;
@@ -82,7 +111,8 @@
 #portfolio-item {
   //todo change the grid spans of all solution items to best show off each set of images
 
-  &.dash {
+  //Dashboards
+  .dash {
     .top {
       .full-image {
         background-image: url(../images/mocks/dash-prod-imc.png);
@@ -133,10 +163,29 @@
       }
     }
   }
-  &.empty {
+
+  //Empty States
+  .empty {
     .top {
       .full-image {
         background-image: url(../images/mocks/empty-prod-mb.png);
+      }
+    }
+
+    .process {
+      #process-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/process/empty-1.png);
+          }
+          &.item2 {
+            background-image: url(../images/process/empty-2.png);
+          }
+          &.item3 {
+            background-image: url(../images/process/empty-3.png);
+            grid-column: 3 / span 2;
+          }
+        }
       }
     }
 
@@ -162,10 +211,13 @@
       }
     }
   }
-  &.pf {
+
+  //Product Details Flow
+  .pf {
     .top {
       .full-image {
         background-image: url(../images/mocks/pf_all_bwsr.png);
+        height: 500px;
       }
     }
 
@@ -209,7 +261,9 @@
       }
     }
   }
-  &.sw {
+
+  //Serengeti West
+  .sw {
     .top {
       .full-image {
         background-image: url(../images/mocks/sw_web_imac.png);
@@ -251,7 +305,9 @@
       }
     }
   }
-  &.zippy {
+
+  //Zippy
+  .zippy {
     .top {
       .full-image {
         background-image: url(../images/mocks/zippy_logo.png);
@@ -274,6 +330,16 @@
           }
         }
       }
+    }
+  }
+
+  footer {
+    background-image: linear-gradient(-149deg, rgba(248,248,248,0) 76%, #be21ff 0%, #be21ff 110%, rgba(248,248,248,0) 40%);
+    margin-top: -150px;
+    padding-top: 210px;
+    #back-to-top {
+      margin-bottom: 30px;
+      margin-top: -70px;
     }
   }
 }
