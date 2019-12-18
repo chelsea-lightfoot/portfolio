@@ -6,11 +6,11 @@
       max-width: unset;
     }
     .full-image {
-      background-image: url(../images/dashboards.png);
+      background-image: linear-gradient(132deg, $purple1 8%, $purple2 80%);
       background-color: transparent;
       background-position: center center;
       background-size: cover;
-      height: 500px;
+      height: 600px;
 
       box-shadow: 2px 2px 5px #b4a1bd;
 
@@ -47,16 +47,18 @@
       display: grid;
 
       grid-template-columns: repeat($grid-column-num, minmax($grid-size, 1fr));
-      grid-template-rows: repeat(1, $grid-size);
+      grid-template-rows: repeat(2, $grid-size);
       grid-gap: $grid-gap;
+      grid-auto-flow: dense;
 
       margin-bottom: $base-space * 2;
       .item-card {
-        background-color: transparent;
         background-position: center center;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-color: white;
 
-        box-shadow: 2px 2px 5px #5e5861;
+        box-shadow: 2px 2px 5px #b4a1bd;
 
         &.item1 {
           background-image: url(../images/dashboards.png);
@@ -79,18 +81,20 @@
       grid-template-columns: repeat($grid-column-num, minmax($grid-size, 1fr));
       grid-template-rows: repeat(3, $grid-size);
       grid-gap: $grid-gap;
+      grid-auto-flow: dense;
 
       margin-bottom: $base-space * 2;
       .item-card {
-        background-color: transparent;
         background-position: center center;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-color: white;
 
         box-shadow: 2px 2px 5px #b4a1bd;
 
         &.item1 {
           background-image: url(../images/dashboards.png);
-          grid-column: 1 / span $grid-column-num;
+          grid-column: 1 / span 4;
           grid-row: 1 / span 2;
         }
         &.item2 {
@@ -116,21 +120,26 @@
     .top {
       .full-image {
         background-image: url(../images/mocks/dash-prod-imc.png);
+        height: 700px;
       }
     }
 
     .process {
       #process-gallery {
+        grid-template-rows: repeat(1, 200px);
         .item-card {
           &.item1 {
             background-image: url(../images/process/dashes-sketch5.jpg);
+            background-position: top left;
+            background-size: 130%;
           }
           &.item2 {
-            background-image: url(../images/process/dashes-sketch4.jpg);
+            background-image: url(../images/process/dashes-sketch3.jpg);
+            background-position: top left;
+            background-size: 130%;
           }
           &.item3 {
             background-image: url(../images/process/dashes-sketch2.jpg);
-            grid-column: 3 / span 2;
           }
         }
       }
@@ -141,23 +150,25 @@
         .item-card {
           &.item1 {
             background-image: url(../images/unmocked/dash-pl.png);
-            grid-column: 1 / span $grid-column-num;
-            grid-row: 1 / span 2;
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 3;
+            background-size: 100%;
+            background-position: top center;
+            background-color: #2e3034;
           }
           &.item2 {
             background-image: url(../images/mocks/dash-mobile.png);
-            grid-column: 1 / span 3;
-            grid-row: 3;
+            grid-column: unset;
+            grid-row: unset;
           }
           &.item3 {
             background-image: url(../images/unmocked/dash-mgmt.png);
-            grid-column: 4;
-            grid-row: 3;
+            background-size: 100%;
+            background-position: top center;
+            background-color: #2e3034;
           }
           &.item4 {
             background-image: url(../images/unmocked/dash-prod.png);
-            grid-column: 4;
-            grid-row: 3;
           }
         }
       }
@@ -177,13 +188,16 @@
         .item-card {
           &.item1 {
             background-image: url(../images/process/empty-1.png);
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            background-position: top center;
           }
           &.item2 {
             background-image: url(../images/process/empty-2.png);
+            grid-column: 3 / span 2;
           }
           &.item3 {
             background-image: url(../images/process/empty-3.png);
-            grid-column: 3 / span 2;
           }
         }
       }
@@ -191,21 +205,19 @@
 
     .solution {
       #solution-gallery {
+        grid-template-rows: repeat(2, $grid-size);
         .item-card {
           &.item1 {
             background-image: url(../images/unmocked/empty_prod.png);
-            grid-column: 1 / span $grid-column-num;
-            grid-row: 1 / span 2;
+            background-position: top center;
+            grid-column: span 2;
+            grid-row: span 2;
           }
           &.item2 {
             background-image: url(../images/unmocked/empty_market.png);
-            grid-column: 1 / span 3;
-            grid-row: 3;
-          }
-          &.item3 {
-            background-image: url(../images/unmocked/empty_vision.png);
-            grid-column: 4;
-            grid-row: 3;
+            background-position: top center;
+            grid-column: span 2;
+            grid-row: span 2;
           }
         }
       }
@@ -225,14 +237,18 @@
       #process-gallery {
         .item-card {
           &.item1 {
-            background-image: url(../images/process/pf-sketch6.jpg);
+            background-image: url(../images/process/pf-flow.png);
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
           }
           &.item2 {
-            background-image: url(../images/process/pf-sketch1.jpg);
+            background-image: url(../images/process/pf-sketch6.jpg);
           }
           &.item3 {
-            background-image: url(../images/process/pf-flow.png);
-            grid-column: 3 / span 2;
+            background-image: url(../images/process/pf-start1.png);
+          }
+          &.item4 {
+            background-image: url(../images/process/pf-sketch1.jpg);
           }
         }
       }
@@ -243,20 +259,18 @@
         .item-card {
           &.item1 {
             background-image: url(../images/mocks/pf_ov_bwsr.png);
-            grid-column: 1 / span $grid-column-num;
-            grid-row: 1 / span 2;
-          }
-          //todo PUT IN VIDEO
-          &.item2 {
-            background-image: url(../images/dashboards.png);
             grid-column: 1 / span 3;
-            grid-row: 3;
+            grid-row: 1 / span 3;
+          }
+          &.item2 {
+            background-image: url(../images/mocks/pf_ov_mobile.png);
+            grid-column: unset;
+            grid-row: span 2;
           }
           &.item3 {
-            background-image: url(../images/mocks/pf_ov_mobile.png);
-            grid-column: 4;
-            grid-row: 3;
+            background-image: url(../images/mocks/pf_pdmnu_mobile.png);
           }
+
         }
       }
     }
@@ -267,6 +281,7 @@
     .top {
       .full-image {
         background-image: url(../images/mocks/sw_web_imac.png);
+        height: 700px;
       }
     }
 
@@ -275,9 +290,15 @@
         .item-card {
           &.item1 {
             background-image: url(../images/process/website_old.png);
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
+            background-position: top center;
           }
           &.item2 {
             background-image: url(../images/process/sw_logo_ALL.png);
+            grid-column: span 1;
+            grid-row: span 2;
+            background-position: center right;
           }
         }
       }
@@ -288,18 +309,22 @@
         .item-card {
           &.item1 {
             background-image: url(../images/mocks/sw_logo.png);
-            grid-column: 1 / span $grid-column-num;
+            grid-column: 3 / span 2;
             grid-row: 1 / span 2;
           }
           &.item2 {
-            background-image: url(../images/mocks/sw_edit_bwsr.png);
-            grid-column: 1 / span 3;
-            grid-row: 3;
+            background-image: url(../images/mocks/sw_inner_bwsr.png);
+            grid-column: unset;
+            grid-row: unset;
           }
           &.item3 {
             background-image: url(../images/unmocked/sw_home3.png);
-            grid-column: 4;
-            grid-row: 3;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 3;
+            background-position: top center;
+          }
+          &.item4 {
+            background-image: url(../images/mocks/sw_edit_bwsr.png);
           }
         }
       }
@@ -311,6 +336,7 @@
     .top {
       .full-image {
         background-image: url(../images/mocks/zippy_logo.png);
+        height: 500px;
       }
     }
 
@@ -318,15 +344,23 @@
       #process-gallery {
         .item-card {
           &.item1 {
-            background-image: url(../images/process/zippy-process.png);
+            background-image: url(../images/process/zippy-sketch3.jpg);
+            grid-column: span 2;
+            grid-row: span 2;
           }
           &.item2 {
             background-image: url(../images/process/zippy-sketch1.jpg);
-            //background-image: url(../images/process/zippy-sketch2.jpg);
           }
           &.item3 {
-            background-image: url(../images/process/zippy-sketch3.jpg);
-            grid-column: 3 / span 2;
+            background-image: url(../images/process/zippy-sketch2.jpg);
+            grid-column: unset;
+            grid-row: unset;
+          }
+          &.item4 {
+            background-image: url(../images/process/zippy-process.png);
+            grid-row: 1 / span 2;
+            grid-column: 4;
+            background-position: bottom center;
           }
         }
       }

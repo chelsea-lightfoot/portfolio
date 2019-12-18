@@ -74,22 +74,28 @@
     <section class="zippy">
 
         <section class="top">
+            <div class="limit-width">
             <h2>Zippy Logo Design</h2>
 
             <div class="full-image"></div>
+            </div>
         </section>
 
         <section class="problem">
+            <div class="limit-width">
             <h2>Problem</h2>
 
-            <p>Inxeption had a big, new service to add to the platform: fast, easy, flat-rate shipping for industrial purposes. They wanted to differentiate this service from the rest of the platform for better marketing, thus naming it “Zippy” and requesting a service logo that would complement the company logo.</p>
+            <p>Inxeption had a big, new service to add to the platform: fast, easy, flat-rate shipping for industrial purposes. They wanted to differentiate this service from the rest of the platform for better marketing, thus naming it "Zippy" and requesting a service logo that would complement the company logo.</p>
+            </div>
         </section>
 
         <section class="process">
+            <div class="limit-width">
             <div id="process-gallery">
                 <div class="item-card item1"></div>
                 <div class="item-card item2"></div>
                 <div class="item-card item3"></div>
+                <div class="item-card item4"></div>
             </div>
 
             <h2>Process</h2>
@@ -97,14 +103,16 @@
             <p>After meeting with the CEO and my manager to understand their thoughts and wishes for the logo, I began sketching as many ideas as I could come up with. After filling two poster-sized pages I reconvened with the CEO and my manager to see which idea caught their eyes.</p>
 
             <p>Taking into consideration the feedback I received I created stronger, more fleshed out versions of the chosen ideas. From there, with more meetings, I was able to nail down the general look and feel of the logo - a flying box. Moving to Illustrator I began creating the final logo, experimenting with the various elements in our concept: wings, boxes, and lighting bolts. I had many design rounds with my manager and the CEO to ensure the logo was the best it could be.</p>
+            </div>
         </section>
 
         <section class="solution">
+            <div class="limit-width">
             <div class="full-image"></div>
 
             <h2>Solution</h2>
 
-            <p>The final logo is an isometric box with wings, using a simple color palette of dark grey, the brand orange, and white. The diagonal angle of the lines imply movement, and all corners are slightly rounded to give the impression of metal embossing. I chose a new typeface for the “Zippy” part of the logo, one that I thought best conveyed the dual concepts of technology and industry. I created a single color version in the case that we need it, but thus far that has not been necessary.</p>
+            <p>The final logo is an isometric box with wings, using a simple color palette of dark grey, the brand orange, and white. The diagonal angle of the lines imply movement, and all corners are slightly rounded to give the impression of metal embossing. I chose a new typeface for the "Zippy" part of the logo, one that I thought best conveyed the dual concepts of technology and industry. I created a single color version in the case that we need it, but thus far that has not been necessary.</p>
 
             <p>The logo was well received by everyone involved and is now a much beloved part of the company branding.</p>
 
@@ -113,7 +121,7 @@
                 <!--<div class="item-card item2"></div>-->
                 <!--<div class="item-card item3"></div>-->
             <!--</div>-->
-
+            </div>
         </section>
     </section>
 </main>
@@ -130,3 +138,31 @@
 </footer>
 </body>
 </html>
+<script>
+    var checkSubNavHasActive = function (element) {
+        var navHasActive = [];
+
+        _.each($(element).find('.navitems').children(), function (child) {
+            if ($(child).hasClass('active')) {
+                navHasActive.push(child);
+            } else {
+                _.remove(navHasActive, function (n) {
+                    return n === child;
+                });
+            }
+        });
+
+        return navHasActive;
+    };
+    /**
+     * Apply active class to the navigation items so users know where they are in the context of the whole site.
+     * @param activeNavId
+     * @param activeSubNavId
+     */
+    var updateActiveNav = function (activeNavId, activeSubNavId) {
+        $('.nav-item').removeClass('active');
+
+        $('#navPrimary-' + activeNavId).addClass('active');
+        $('#navSecondary-' + activeSubNavId).addClass('active');
+    };
+</script>
