@@ -27,6 +27,16 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    .socials {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .mobile-menu {
+    color: $dark-text-color;
+    padding: 20px;
+    margin-right: -20px;
+    display: none;
   }
   a {
     color: $dark-text-color;
@@ -68,6 +78,59 @@
       }
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    .nav-right {
+      height: 0;
+      display: none;
+      overflow: hidden;
+
+      flex-direction: column;
+      position: fixed;
+      background-color: #aa77df;
+      width: 100%;
+      left: 0;
+      top: 100px;
+      bottom: 0;
+      z-index: 1;
+      justify-content: flex-start;
+      padding: 30px;
+      align-items: flex-start;
+      .links {
+        flex-direction: column;
+        align-items: flex-start;
+        a {
+          height: 60px;
+          font-size: 24px;
+          color: $light-text-color;
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+          &.social-icon {
+            padding-right: $base-space/2;
+            padding-left: $base-space/2;
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+            svg {
+              width: 30px;
+              fill: $light-text-color;
+              &.github {
+                width: 23px;
+              }
+            }
+          }
+        }
+        .socials {
+          margin-top: 30px;
+          margin-left: -15px;
+        }
+      }
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
 }
 
 #bottom-nav {
@@ -88,6 +151,15 @@ footer {
     .material-icons {
       font-size: 50px;
       color: $light-text-color;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    background-color: #8c6ed9;
+    margin-top: -300px;
+    padding-top: 300px;
+    #back-to-top {
+      margin-bottom: 60px;
+      margin-top: 0;
     }
   }
 }

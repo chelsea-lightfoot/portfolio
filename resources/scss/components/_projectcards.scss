@@ -96,4 +96,16 @@
       }
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    .gallery-cards {
+      grid-auto-rows: 250px;
+      .card {
+        &.large {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+      }
+    }
+  }
 }

@@ -10,7 +10,6 @@
       background-color: transparent;
       background-position: center center;
       background-size: cover;
-      height: 600px;
 
       box-shadow: 2px 2px 5px #b4a1bd;
 
@@ -27,7 +26,7 @@
       right: -30px;
     }
     padding: {
-      top: 470px;
+      top: 500px;
       left: 30px;
       right: 30px;
     }
@@ -110,12 +109,64 @@
       }
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    .problem {
+      background-image: linear-gradient(-190deg, rgba(248,248,248,0) 16%, #dc87e8 10%, #dc87e8 100%, rgba(248,248,248,0) 40%);
+      padding-top: 330px;
+      padding-bottom: 60px;
+      height: unset;
+    }
+    .process {
+      margin-top: -140px;
+      #process-gallery {
+        grid-auto-rows: $grid-size;
+        .item-card {
+          &.item3 {
+            grid-column: unset;
+          }
+        }
+      }
+    }
+    .solution {
+      #solution-gallery {
+        grid-auto-rows: 250px;
+        grid-template-rows: repeat(3, 250px);
+        .item-card {
+          &.item1 {
+            grid-column: unset;
+            grid-row: unset;
+          }
+          &.item2 {
+            grid-column: unset;
+            grid-row: unset;
+          }
+          &.item3 {
+            grid-column: unset;
+            grid-row: unset;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    background-image: linear-gradient(-149deg, $transparent 76%, $accent2 0%, $accent2 110%, $transparent 40%);
+    background-color: unset;
+    margin-top: -200px;
+    padding-top: 280px;
+    #back-to-top {
+      margin-bottom: 30px;
+      margin-top: -70px;
+    }
+    @media only screen and (max-width: 600px) {
+      background-image: linear-gradient(-165deg, rgba(248,248,248,0) 56%, #8c6ed9 0%, #8c6ed9 110%, rgba(248,248,248,0) 40%);
+    }
+  }
 }
 
 #portfolio-item {
-  //todo change the grid spans of all solution items to best show off each set of images
-
-  //Dashboards
+  //--------------------DASHBOARDS--------------------
   .dash {
     .top {
       .full-image {
@@ -173,13 +224,52 @@
         }
       }
     }
+
+    @media only screen and (max-width: 600px) {
+      .top {
+        .full-image {
+          height: 350px;
+        }
+      }
+      .process {
+        #process-gallery {
+          .item-card {
+            &.item1 {
+            }
+            &.item2 {
+            }
+            &.item3 {
+            }
+          }
+        }
+      }
+      .solution {
+        #solution-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+            &.item2 {
+            }
+            &.item3 {
+              grid-row: unset;
+            }
+            &.item4 {
+            }
+          }
+        }
+      }
+    }
   }
 
-  //Empty States
+
+  //--------------------EMPTY STATES--------------------
   .empty {
     .top {
       .full-image {
         background-image: url(../images/mocks/empty-prod-mb.png);
+        height: 600px;
       }
     }
 
@@ -222,9 +312,51 @@
         }
       }
     }
+
+    @media only screen and (max-width: 600px) {
+      .top {
+        .full-image {
+          height: 350px;
+        }
+      }
+      .process {
+        #process-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: span 2;
+            }
+            &.item2 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+            &.item3 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+          }
+        }
+      }
+      .solution {
+        #solution-gallery {
+          grid-template-rows: repeat(2, 330px);
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+            &.item2 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+          }
+        }
+      }
+    }
   }
 
-  //Product Details Flow
+
+  //--------------------PRODUCT DETAILS FLOW--------------------
   .pf {
     .top {
       .full-image {
@@ -274,9 +406,46 @@
         }
       }
     }
+
+    @media only screen and (max-width: 600px) {
+      .top {
+        .full-image {
+          height: 350px;
+        }
+      }
+      .process {
+        #process-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: span 2;
+            }
+            &.item2 {
+            }
+          }
+        }
+      }
+      .solution {
+        #solution-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+            &.item2 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+            &.item3 {
+            }
+          }
+        }
+      }
+    }
   }
 
-  //Serengeti West
+
+  //--------------------SERENGETI WEST------------------
   .sw {
     .top {
       .full-image {
@@ -329,9 +498,45 @@
         }
       }
     }
+
+    @media only screen and (max-width: 600px) {
+      .top {
+        .full-image {
+          height: 350px;
+        }
+      }
+      .process {
+        #process-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+            &.item2 {
+              grid-column: unset;
+            }
+          }
+        }
+      }
+      .solution {
+        #solution-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+            &.item3 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+          }
+        }
+      }
+    }
   }
 
-  //Zippy
+
+  //--------------------ZIPPY--------------------
   .zippy {
     .top {
       .full-image {
@@ -365,15 +570,26 @@
         }
       }
     }
-  }
 
-  footer {
-    background-image: linear-gradient(-149deg, $transparent 76%, $accent2 0%, $accent2 110%, $transparent 40%);
-    margin-top: -200px;
-    padding-top: 280px;
-    #back-to-top {
-      margin-bottom: 30px;
-      margin-top: -70px;
+    @media only screen and (max-width: 600px) {
+      .top {
+        .full-image {
+          height: 350px;
+        }
+      }
+      .process {
+        #process-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+            }
+            &.item4 {
+              grid-column: unset;
+              grid-row: span 2;
+            }
+          }
+        }
+      }
     }
   }
 }
