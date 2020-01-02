@@ -40,8 +40,10 @@
   }
   a {
     color: $dark-text-color;
-    &:hover {
-      color: $accent1;
+    @media only screen and (min-width: 600px) {
+      &:hover {
+        color: $accent1;
+      }
     }
   }
 
@@ -59,20 +61,24 @@
       &.social-icon {
         &:not(:last-child) {
           margin-right: $base-space/2;
+          &.instagram {
+            margin-right: 8px;
+          }
         }
         svg {
           width: 25px;
           fill: $dark-text-color;
-          &.facebook {
-            padding-right: 3px;
-          }
-          &.github {
+        }
+        &.github {
+          svg {
             width: 17px;
           }
         }
-        &:hover {
-          svg {
-            fill: $accent1;
+        @media only screen and (min-width: 600px) {
+          &:hover {
+            svg {
+              fill: $accent1;
+            }
           }
         }
       }
@@ -80,28 +86,32 @@
   }
 
   @media only screen and (max-width: 600px) {
+    .nav-left {
+      z-index: 3;
+    }
     .nav-right {
       height: 0;
-      display: none;
+      transition: height .5s ease;
       overflow: hidden;
 
       flex-direction: column;
       position: fixed;
       background-color: #aa77df;
+      background-image: linear-gradient(160deg, $accent1 14%, $accent2 90%);
       width: 100%;
       left: 0;
-      top: 100px;
+      top: 0;
       bottom: 0;
       z-index: 1;
       justify-content: flex-start;
-      padding: 30px;
       align-items: flex-start;
       .links {
         flex-direction: column;
         align-items: flex-start;
+        margin: 90px 30px 0;
         a {
           height: 60px;
-          font-size: 24px;
+          font-size: $base-font-size * 1.25;
           color: $light-text-color;
           &:not(:last-child) {
             margin-right: 0;
@@ -111,11 +121,16 @@
             padding-left: $base-space/2;
             &:not(:last-child) {
               margin-right: 0;
+              &.instagram {
+                margin-right: -8px;
+              }
             }
             svg {
               width: 30px;
               fill: $light-text-color;
-              &.github {
+            }
+            &.github {
+              svg {
                 width: 23px;
               }
             }
@@ -126,9 +141,29 @@
           margin-left: -15px;
         }
       }
+      &.show-mobile-nav {
+        height: 100%;
+      }
     }
     .mobile-menu {
       display: block;
+      z-index: 3;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mnav-open {
+    overflow: hidden;
+    height: 100vh;
+    #top-nav {
+      .name {
+        h1 {
+          color: $light-text-color;
+        }
+      }
+      .mobile-menu {
+        color: $light-text-color;
+      }
     }
   }
 }

@@ -88,10 +88,12 @@
           }
         }
       }
-      &:hover {
-        box-shadow: 4px 4px 8px #c4bbc7;
-        .card-overlay {
-          height: 100%;
+      @media only screen and (min-width: 600px) {
+        &:hover {
+          box-shadow: 4px 4px 8px #c4bbc7;
+          .card-overlay {
+            height: 100%;
+          }
         }
       }
     }

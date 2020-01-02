@@ -76,7 +76,7 @@
       .photo-card {
         &.large {
           grid-column: span 1;
-          grid-row: span 2;
+          grid-row: unset;
         }
       }
     }
@@ -98,8 +98,10 @@
       color: $light-text-color;
       font-family: $display-font;
       height: 50px;
-      &:hover {
-        color: $accent2;
+      @media only screen and (min-width: 600px) {
+        &:hover {
+          color: $accent2;
+        }
       }
     }
   }
@@ -109,6 +111,9 @@
     .download-link {
       height: 270px;
       padding-top: 0;
+      a {
+        font-size: $base-font-size * 1.7;
+      }
     }
   }
 }

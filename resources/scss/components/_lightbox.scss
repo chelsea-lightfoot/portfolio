@@ -1,0 +1,87 @@
+#lightbox {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $lightbox-background;
+  .lb-image {
+    overflow: auto;
+    width: 100%;
+    img {
+      width: 88%;
+      height: auto;
+      display: block;
+      margin: 30px auto;
+    }
+  }
+}
+
+.lightbox-available {
+  position: relative;
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $card-background;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+
+    display: flex;
+    align-items: center;
+
+    .card-text {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: $base-space;
+
+      i {
+        color: white;
+        font-size: 60px;
+      }
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    &:hover {
+      box-shadow: 4px 4px 8px #c4bbc7;
+      .card-overlay {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.lb-open {
+  overflow: hidden;
+  height: 100vh;
+  .limit-width {
+    margin-right: 15px;
+  }
+}
+
+.close {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .material-icons {
+    font-size: 30px;
+    text-shadow: 1px 1px 6px $lightbox-background;
+  }
+}
