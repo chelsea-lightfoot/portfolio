@@ -53,6 +53,9 @@ p, li {
   margin-bottom: 20px;
   line-height: 26px;
   max-width: $text-width;
+  a {
+    color: $accent2;
+  }
 }
 
 b {
@@ -70,6 +73,9 @@ a {
     margin-top: -30px;
     display: block;
     position: absolute;
+  }
+  &:focus {
+    outline: none;
   }
   @media only screen and (min-width: 600px) {
     &:hover {
