@@ -13,8 +13,22 @@ $(document).ready(function() {
     });
 
     $('.lightbox-available').on('click', function () {
-        var bg = $(this).css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
-        $('.lb-image').append($('<img src="' + bg + '">'));
+        var image = $(this).css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
+
+        var largeImage = $(this).data("lburl");
+        var origin = window.location.origin;
+        var pathArray = window.location.pathname.split('/');
+        var secondLevelPath = pathArray[1];
+
+        if ($(this).data("lburl")) {
+            if (origin === "http://localhost:63342") {
+                $('.lb-image').append($('<img src="' + origin + '/' + secondLevelPath + '/' + largeImage + '">'));
+            } else {
+                $('.lb-image').append($('<img src="' + origin + '/' + largeImage + '">'));
+            }
+        } else {
+            $('.lb-image').append($('<img src="' + image + '">'));
+        }
 
         if (lightBox.hasClass('view-image')) {
             lightBox.css('display','none');
@@ -41,6 +55,8 @@ $(document).ready(function() {
         }
     });
 
+
+    //SMOOTH SCROLLING
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
         .not('[href="#"]')

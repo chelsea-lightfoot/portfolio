@@ -48,7 +48,7 @@
       grid-template-columns: repeat($grid-column-num, minmax($grid-size, 1fr));
       grid-template-rows: repeat(2, $grid-size);
       grid-gap: $grid-gap;
-      grid-auto-flow: dense;
+      grid-auto-flow: column;
 
       margin-bottom: $base-space * 2;
       .item-card {
@@ -121,6 +121,7 @@
       margin-top: -140px;
       #process-gallery {
         grid-auto-rows: $grid-size;
+        grid-auto-flow: dense;
         .item-card {
           &.item3 {
             grid-column: unset;
@@ -586,6 +587,105 @@
             &.item4 {
               grid-column: unset;
               grid-row: span 2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //--------------------PRODUCT PAGE TEMPLATE--------------------
+  .sp {
+    .top {
+      .full-image {
+        background-image: url(../images/mocks/sp_imac-mobile.png);
+        height: 700px;
+      }
+    }
+
+    .process {
+      #process-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/process/sp_sketch2.jpg);
+            grid-column: span 2;
+          }
+          &.item2 {
+            background-image: url(../images/process/sp_sketch1.jpg);
+          }
+          &.item3 {
+            background-image: url(../images/process/sp_sketch3.jpg);
+            grid-column: unset;
+          }
+          &.item4 {
+            background-image: url(../images/process/sp_wire-desktop.png);
+            background-position: top center;
+            grid-row: span 2;
+          }
+          &.item5 {
+            background-image: url(../images/process/sp_wire-mobile.png);
+            background-position: top center;
+            grid-row: span 2;
+          }
+        }
+      }
+    }
+
+    .solution {
+      #solution-gallery {
+        .item-card {
+          &.item1 {
+            background-image: url(../images/mocks/sp-icom_bwsr.png);
+            grid-column: span 2;
+            grid-row: span 2;
+          }
+          &.item2 {
+            background-image: url(../images/mocks/sp-setup_bwsr.png);
+            grid-column: span 2;
+            grid-row: span 2;
+          }
+          &.item3 {
+            background-image: url(../images/mocks/sp-nav_bwsr.png);
+            grid-column: unset;
+            grid-row: unset;
+          }
+          &.item4 {
+            background-image: url(../images/mocks/sp-page_mobile.png);
+          }
+          &.item5 {
+            background-image: url(../images/mocks/sp-sidenav_mobile.png);
+          }
+          &.item6 {
+            background-image: url(../images/mocks/sp-nav_mobile.png);
+            grid-column: unset;
+            grid-row: unset;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .top {
+        .full-image {
+          height: 350px;
+        }
+      }
+      .process {
+        #process-gallery {
+          .item-card {
+            &.item1 {
+              grid-column: unset;
+              grid-row: unset;
+            }
+          }
+        }
+      }
+      .solution {
+        #solution-gallery {
+          .item-card {
+            &.item1, &.item2, &.item5 {
+              grid-column: unset;
+              grid-row: unset;
             }
           }
         }

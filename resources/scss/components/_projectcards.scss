@@ -36,8 +36,8 @@
       &.dashboards {
         background-image: url(../images/mocks/dash-prod-imc.png);
       }
-      &.empty-states {
-        background-image: url(../images/mocks/empty-prod-mb.png);
+      &.service-pages {
+        background-image: url(../images/mocks/sp_imac-mobile.png);
       }
       &.product-details {
         background-image: url(../images/mocks/pf_all_bwsr.png);
@@ -48,6 +48,10 @@
       &.sw-website {
         background-image: url(../images/mocks/sw_web_imac.png);
       }
+      &.empty-states {
+        background-image: url(../images/mocks/empty-prod-mb.png);
+      }
+
 
       .card-overlay {
         position: absolute;
@@ -76,6 +80,7 @@
             color: $light-text-color;
             font-size: $base-font-size * 0.875;
             text-transform: uppercase;
+            line-height: 20px;
             letter-spacing: 1px;
             margin-bottom: 5px;
           }

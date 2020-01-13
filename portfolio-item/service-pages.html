@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../resources/js/main.js"></script>
+
 </head>
 <body id="portfolio-item">
 <header>
@@ -86,13 +87,12 @@
     </div>
 </header>
 <main>
-    <section class="dash">
+    <section class="sp">
 
         <section class="top">
             <div class="limit-width">
-            <h2>Data Overview Dashboards</h2>
-
-            <div class="full-image"></div>
+                <h2>Service Page Template</h2>
+                <div class="full-image"></div>
             </div>
         </section>
 
@@ -100,32 +100,36 @@
             <div class="limit-width">
                 <h2>Problem</h2>
 
-                <p>The homepage of our application was fairly empty, and failed to provide system administrators a view into the day-to-day activity of their company - data which we possessed, but had not surfaced through our application.</p>
+                <p>Using our system to dynamically generate our own products to sell to potential customers via our website was efficient - but it wasn’t SEO capable. We weren’t ranking in searches for any of our fairly unique products and paid advertisements were not sticking. On top of this, many of our current customers had been sold on only one service and there was no place for them to learn more about the many services we offer.</p>
             </div>
         </section>
 
         <section class="process">
             <div class="limit-width">
                 <div id="process-gallery">
-                <div class="item-card item1"></div>
-                <div class="item-card item2"></div>
-                <div class="item-card item3"></div>
+                    <div class="item-card item1"></div>
+                    <div class="item-card item2"></div>
+                    <div class="item-card item3"></div>
+                    <div class="item-card item4"></div>
+                    <div class="item-card item5"></div>
             </div>
 
                 <h2>Process</h2>
 
-                <p>First and foremost, I had to identify the constraints of the tools I would be working with. I discussed what data was readily available with our engineering team and researched the Javascript library we were using for data visualization in other modules of the application. I researched what made a good software dashboard, and &mdash; with a spark of inspiration &mdash; went straight into Adobe Illustrator to create a prototype.</p>
+                <p>We decided to create static product pages that were based on SEO necessities instead of what our product could generate on its own, with the hope that this design could be repurposed as a template for the dynamically generated products in the future.</p>
 
-                <p>Half-way through my design, we had a major priortiy shift in the company. Inxeption had grown to over 200 customers and the small management application we had created was no longer powerful enough. As an integral part of this initiative to improve the management application, we wanted to provide our customers with the tools to view relevant data quickly and easily. We decided to re-use my original dashboard project with slightly different data.</p>
+                <p>I had a few meetings with our SEO marketing expert to learn what elements would be needed. Then I went to sketching, sectioning out the features of the page so I could focus on each piece. I started with the initial product promotional text and product cross navigation that would go above the fold - this piece would inform the rest of the project so it was important to get an idea of it’s layout before I continued with the SEO content below the fold.</p>
 
-                <p>I had many meetings with management to determine what data they wanted to see and what they considered most important. Then I reviewed the data requested with engineering to understand what was actually feasible in the short time we had allocated for this project. Armed with those competing interests, I was able to collaborate with another designer on my team to present relevant, high-priority data in my dashboard design.</p>
+                <p>After sketching layouts, I decided to make wireframes of the layout so I could ensure that I was including all of the elements we needed for these pages and putting them in the correct placement. After that meeting was successful and I had agreement from the team, my manager encouraged me to move straight to development of the pages.</p>
+
+                <p>I developed the page template using a system the lead designer had previously created but had not yet implemented. After recreating the base layout from my wireframes I moved into truly styling the page into a final design.</p>
             </div>
         </section>
 
         <section class="solution">
             <div class="limit-width">
                 <div id="solution-gallery">
-                    <div class="item-card item1 lightbox-available">
+                    <div data-lburl="resources/images/unmocked/sp_desktop-full.png" class="item-card item1 lightbox-available">
                         <div class="card-overlay">
                             <div class="card-text">
                                 <i class="material-icons">
@@ -161,15 +165,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="item-card item5 lightbox-available">
+                        <div class="card-overlay">
+                            <div class="card-text">
+                                <i class="material-icons">
+                                    fullscreen
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-card item6 lightbox-available">
+                        <div class="card-overlay">
+                            <div class="card-text">
+                                <i class="material-icons">
+                                    fullscreen
+                                </i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <h2>Solution</h2>
 
-                <p>Through the course of this project I created three dashboard designs: the original application dashboard, mini dashboards for the application modules, and the management tool overview dashboard that was implemented in the end.</p>
+                <p>The main details about each service is placed above the fold with a left navigation to help users self-select into the product they are interested in. We decided to put the navigation explicitly in the page instead of in a dropdown avoid hiding the breadth of what Inxeption offers. I stuck with a fairly simple design for these pages, focusing on typographical hierarchy to help viewers navigate the large amount of content without becoming overwhelmed.</p>
 
-                <p>While producing the design of these graphs and charts, I sought out opportunities for flexibility and the incorporation of future vision. For example, I built in room for notifications in our header and a product completion percentage graph - the latter of which has since been integrated into the design of the <a href="../portfolio-item/product-details.html">Product Details Input Flow</a>.</p>
+                <p>Leveraging my skills in user experience, I developed the first page as a robust template to be used for all future product pages. This included: using the Handlebars library to template out recurring blocks of code - specifically the sidebar navigation, ensuring that the code was responsive, using javascript to create a dropdown menu that responded to the current page, and writing well-organized and readable code.</p>
+
+                <p>I was able to segment the many pieces of the template into straight-forward tasks and easily hand off the rest of the implementation of this project to a new Web Dev hire. After guiding him through the initial template he was able to intuitively build the remaining pages needed for the first product push - and has been able to create new pages as they are needed.</p>
             </div>
         </section>
+
     </section>
 </main>
 <div id="lightbox" style="display: none;">
