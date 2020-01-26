@@ -155,24 +155,18 @@
       #solution-gallery {
         .item-card {
           &.item1 {
-            background-image: url(../images/unmocked/dash-pl.png);
+            background-image: url(../images/mocks/dash-ledger_bwsr.png);
             grid-column: span 3;
             grid-row: span 3;
-            background-size: 100%;
-            background-position: top center;
-            background-color: #2e3034;
           }
           &.item2 {
             background-image: url(../images/mocks/dash-mobile.png);
           }
           &.item3 {
-            background-image: url(../images/unmocked/dash-mgmt.png);
-            background-size: 100%;
-            background-position: top center;
-            background-color: #2e3034;
+            background-image: url(../images/mocks/dash-admin_bwsr.png);
           }
           &.item4 {
-            background-image: url(../images/unmocked/dash-prod.png);
+            background-image: url(../images/mocks/dash-prod_bwsr.png);
           }
         }
       }
@@ -243,13 +237,12 @@
         grid-template-rows: repeat(2, $grid-size);
         .item-card {
           &.item1 {
-            background-image: url(../images/unmocked/empty_prod.png);
-            background-position: top center;
+            background-image: url(../images/mocks/empty-1_bwsr.png);
             grid-column: span 2;
             grid-row: span 2;
           }
           &.item2 {
-            background-image: url(../images/unmocked/empty_market.png);
+            background-image: url(../images/mocks/empty-2_bwsr.png);
             background-position: top center;
             grid-column: span 2;
             grid-row: span 2;
@@ -398,20 +391,16 @@
       #solution-gallery {
         .item-card {
           &.item1 {
-            background-image: url(../images/unmocked/sw_home3.png);
+            background-image: url(../images/mocks/sw_home_bwsr.png);
             grid-column: span 2;
-            grid-row: span 3;
-            background-position: top center;
+            grid-row: span 2;
           }
           &.item2 {
             background-image: url(../images/mocks/sw_inner_bwsr.png);
-            grid-column: unset;
-            grid-row: unset;
           }
           &.item3 {
             background-image: url(../images/mocks/sw_logo.png);
             grid-column: span 2;
-            grid-row: span 2;
           }
           &.item4 {
             background-image: url(../images/mocks/sw_edit_bwsr.png);
@@ -511,11 +500,11 @@
   }
 
 
-  //--------------------PRODUCT PAGE TEMPLATE--------------------
+  //--------------------INX.COM--------------------
   .sp {
     .top {
       .full-image {
-        background-image: url(../images/mocks/sp_imac-mobile.png);
+        background-image: url(../images/mocks/com_imac-mobile.png);
         height: 700px;
       }
     }
@@ -524,24 +513,25 @@
       #process-gallery {
         .item-card {
           &.item1 {
-            background-image: url(../images/process/sp_sketch2.jpg);
+            background-image: url(../images/process/sp_wire-desktop.png);
+            background-position: top center;
             grid-column: span 2;
           }
           &.item2 {
-            background-image: url(../images/process/sp_wire-desktop.png);
+            background-image: url(../images/process/sp_sketch2.jpg);
             background-position: top center;
-            grid-row: span 2;
           }
           &.item3 {
-            background-image: url(../images/process/sp_wire-mobile.png);
+            background-image: url(../images/process/team-specs-smol.png);
             background-position: top center;
             grid-row: span 2;
           }
           &.item4 {
-            background-image: url(../images/process/sp_sketch1.jpg);
+            background-image: url(../images/process/old-website-flow.jpg);
+            grid-column: 2 / span 2;
           }
           &.item5 {
-            background-image: url(../images/process/sp_sketch3.jpg);
+            background-image: url(../images/process/sp_sketch1.jpg);
           }
         }
       }
@@ -551,30 +541,26 @@
       #solution-gallery {
         .item-card {
           &.item1 {
-            background-image: url(../images/mocks/sp-icom_bwsr.png);
+            background-image: url(../images/mocks/com-home_bwsr.png);
             grid-column: span 2;
             grid-row: span 2;
           }
           &.item2 {
-            background-image: url(../images/mocks/sp-setup_bwsr.png);
+            background-image: url(../images/mocks/com-team_bwsr.png);
+          }
+          &.item3 {
+            background-image: url(../images/mocks/com-jobs_bwsr.png);
+          }
+          &.item4 {
+            background-image: url(../images/mocks/sp-icom_bwsr.png);
             grid-column: span 2;
             grid-row: span 2;
           }
-          &.item3 {
-            background-image: url(../images/mocks/sp-nav_bwsr.png);
-            grid-column: unset;
-            grid-row: unset;
-          }
-          &.item4 {
+          &.item5 {
             background-image: url(../images/mocks/sp-page_mobile.png);
           }
-          &.item5 {
-            background-image: url(../images/mocks/sp-sidenav_mobile.png);
-          }
           &.item6 {
-            background-image: url(../images/mocks/sp-nav_mobile.png);
-            grid-column: unset;
-            grid-row: unset;
+            background-image: url(../images/mocks/com-buzz_bwsr.png);
           }
         }
       }

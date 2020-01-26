@@ -13,10 +13,16 @@
     overflow: auto;
     width: 100%;
     img {
-      width: 88%;
+      width: 85%;
       height: auto;
       display: block;
       margin: 30px auto;
+      box-shadow: 0 0 20px #491f5a;
+    }
+    &.mobile {
+      img {
+        max-width: 411px;
+      }
     }
   }
 }

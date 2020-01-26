@@ -1,0 +1,89 @@
+body {
+  background-color: $light-background;
+  margin: unset;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  //overflow: hidden;
+}
+
+section, header, footer {
+  padding: 0 $base-space;
+}
+
+main {
+  flex: 1;
+  section {
+    margin-bottom: $base-space * 8;
+    section {
+      padding: 0;
+      margin-bottom: $base-space * 3;
+    }
+  }
+}
+
+.limit-width {
+  max-width: 1024px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $dark-text-color;
+  font-family: $display-font;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: $text-width;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin-bottom: $base-space;
+}
+
+p, li {
+  font-size: $base-font-size;
+  font-family: $body-reg;
+  font-weight: 400;
+  color: $dark-text-color;
+  margin: auto;
+  margin-bottom: 20px;
+  line-height: 26px;
+  max-width: $text-width;
+  a {
+    color: $accent2;
+  }
+}
+
+b {
+  font-family: $body-reg;
+  font-weight: $body-bold;
+}
+
+a {
+  font-family: $body-reg;
+  text-decoration: none;
+  color: $dark-text-color;
+  &.anchor-tag {
+    height: 30px;
+    width: 30px;
+    margin-top: -30px;
+    display: block;
+    position: absolute;
+  }
+  &:focus {
+    outline: none;
+  }
+  @media only screen and (min-width: 600px) {
+    &:hover {
+      color: $accent1;
+    }
+  }
+}
+
+.material-icons {
+  font-size: 20px;
+}
