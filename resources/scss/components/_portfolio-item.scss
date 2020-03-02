@@ -1,8 +1,9 @@
 #portfolio-item {
+  h2 {
+    font-size: $base-font-size * 2.5;
+  }
   .top {
-    margin: 0;
     h2 {
-      font-size: 2.5rem;
       max-width: unset;
     }
     .full-image {
@@ -18,21 +19,14 @@
   }
 
   .problem {
-    background-image: linear-gradient(-190deg, rgba(248,248,248,0) 28%, $accent1 10%, $accent1 70%, rgba(248,248,248,0) 40%);
-    height: 380px;
-    margin: {
-      top: 50px;
-      left: -30px;
-      right: -30px;
-    }
+    background-color: $accent1;
     padding: {
-      top: 520px;
-      left: 30px;
-      right: 30px;
+      top: 90px;
+      bottom: 40px;
     }
+    margin-bottom: 0;
 
     h2 {
-      margin-top: -160px;
       color: #f8f8f8;
     }
     p {
@@ -41,7 +35,9 @@
   }
 
   .process {
-    margin-top: -360px;
+    background-color: $accent1;
+    margin-top: -1px;
+
     #process-gallery {
       display: grid;
 
@@ -57,9 +53,25 @@
         background-repeat: no-repeat;
         background-color: white;
 
-        box-shadow: 2px 2px 5px #b4a1bd;
+        box-shadow:2px 2px 5px #ab72b8;
       }
     }
+
+    h2 {
+      color: #f8f8f8;
+    }
+    p {
+      color: #f8f8f8;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      background-image: linear-gradient(to right bottom, $accent1 49.9%, $light-background 50.1%);
+      margin-top: 60px;
+      height: 160px;
+    }
+
   }
 
   .solution {
@@ -84,17 +96,14 @@
   }
 
   @media only screen and (max-width: 600px) {
-    .problem {
-      background-image: linear-gradient(-190deg, rgba(248,248,248,0) 16%, #dc87e8 10%, #dc87e8 100%, rgba(248,248,248,0) 40%);
-      padding-top: 330px;
-      padding-bottom: 150px;
-      height: unset;
-    }
     .process {
-      margin-top: -140px;
+      padding-bottom: 60px;
       #process-gallery {
         grid-auto-rows: 250px;
         grid-auto-flow: dense;
+      }
+      &:after {
+        display: none;
       }
     }
     .solution {
@@ -105,16 +114,9 @@
   }
 
   footer {
-    background-image: linear-gradient(-149deg, $transparent 80%, $accent2 0%, $accent2 110%, $transparent 40%);
-    background-color: unset;
-    margin-top: -200px;
-    padding-top: 280px;
-    #back-to-top {
-      margin-bottom: 30px;
-      margin-top: -70px;
-    }
+    margin-top: 60px;
     @media only screen and (max-width: 600px) {
-      background-image: linear-gradient(-165deg, rgba(248,248,248,0) 56%, #8c6ed9 0%, #8c6ed9 110%, rgba(248,248,248,0) 40%);
+      margin-top: 0;
     }
   }
 }

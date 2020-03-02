@@ -8,14 +8,10 @@ body {
   //overflow: hidden;
 }
 
-section, header, footer {
-  padding: 0 $base-space;
-}
-
 main {
   flex: 1;
   section {
-    margin-bottom: $base-space * 8;
+    margin-bottom: $base-space * 3;
     section {
       padding: 0;
       margin-bottom: $base-space * 3;
@@ -26,6 +22,7 @@ main {
 .limit-width {
   max-width: 1024px;
   margin: auto;
+  padding: 0 $base-space;
 }
 
 h1, h2, h3, h4, h5, h6 {
