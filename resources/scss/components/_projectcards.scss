@@ -1,4 +1,5 @@
 #portfolio-gallery {
+  margin-top: 30px;
 
   .gallery-cards {
     display: grid;
@@ -19,7 +20,6 @@
       background-size: cover;
 
       box-shadow: 2px 2px 5px #b4a1bd;
-      transition: box-shadow .45s;
 
       &.large {
         grid-column: span 2;
@@ -95,7 +95,6 @@
       }
       @media only screen and (min-width: 600px) {
         &:hover {
-          box-shadow: 4px 4px 8px #c4bbc7;
           .card-overlay {
             height: 100%;
           }

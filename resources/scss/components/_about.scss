@@ -1,5 +1,9 @@
 #about {
 
+  section {
+    margin-bottom: 90px;
+  }
+
   .intro {
     background-color: $accent1;
     padding: {
@@ -7,12 +11,10 @@
       bottom: 40px;
     }
     margin-bottom: 0;
-    h2, p {
-      color: $light-text-color;
-    }
   }
   .face {
     background-color: $accent1;
+    margin-bottom: 120px;
 
     #photo-gallery {
       display: grid;
@@ -29,7 +31,7 @@
         background-position: center center;
         background-size: cover;
 
-        box-shadow: 2px 2px 5px #ab72b8;
+        box-shadow: 2px 2px 5px #b4a1bd;
 
         &.large {
           grid-column: span 2;
@@ -68,7 +70,7 @@
       content: '';
       display: block;
       background-image: linear-gradient(to right bottom, $accent1 49.9%, $light-background 50.1%);
-      margin-top: 60px;
+      margin-top: -240px;
       height: 160px;
     }
   }
@@ -117,11 +119,13 @@
     padding: 90px 0;
     a {
       font-size: $base-font-size * 2.5;
-      color: $light-text-color;
+      color: $accent2;
       font-family: $display-font;
+      font-weight: 500;
+      transition: color .25s;
       @media only screen and (min-width: 600px) {
         &:hover {
-          color: $accent2;
+          color: $light-text-color;
         }
       }
     }

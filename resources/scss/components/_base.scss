@@ -11,10 +11,10 @@ body {
 main {
   flex: 1;
   section {
-    margin-bottom: $base-space * 3;
+    margin-bottom: $base-space * 4;
     section {
       padding: 0;
-      margin-bottom: $base-space * 3;
+      margin-bottom: $base-space * 4;
     }
   }
 }
@@ -25,8 +25,8 @@ main {
   padding: 0 $base-space;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: $dark-text-color;
+h2, h3, h4, h5, h6 {
+  color: $accent2;
   font-family: $display-font;
   font-weight: 500;
   margin: 0 auto;
@@ -35,6 +35,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 1.5rem;
+  font-family: $display-font;
+  font-weight: 500;
+  margin: 0 auto;
+}
+#home {
+  h1 {
+    color: $accent2;
+    font-size: 2.5rem;
+    @media only screen and (max-width: 810px) {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 h2 {
@@ -54,10 +66,15 @@ p, li {
     color: $accent2;
   }
 }
+.reversed {
+  p {
+  letter-spacing: .1px;
+  }
+}
 
 b {
   font-family: $body-reg;
-  font-weight: $body-bold;
+  font-weight: $bold;
 }
 
 a {
@@ -74,6 +91,7 @@ a {
   &:focus {
     outline: none;
   }
+  transition: color .25s;
   @media only screen and (min-width: 600px) {
     &:hover {
       color: $accent1;
