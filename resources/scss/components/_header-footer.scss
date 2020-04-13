@@ -94,6 +94,24 @@
     }
   }
 
+  @media only screen and (max-width: 735px) and (min-width: 600px) {
+    .links {
+      a {
+        font-size: 13px;
+        &:not(:last-child) {
+          margin-right: $base-space/2;
+        }
+
+        &.social-icon {
+          svg {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+  }
+
   @media only screen and (max-width: 600px) {
     .nav-left {
       z-index: 3;
