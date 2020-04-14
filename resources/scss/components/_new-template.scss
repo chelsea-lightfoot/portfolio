@@ -1,0 +1,47 @@
+.flipflop-block {
+  display: flex;
+  margin-bottom: $base-space * 6;
+  &:first-child {
+    margin-top: $base-space * 2;
+  }
+
+  .ff-image {
+    flex: 3;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      max-width: 100%;
+      margin-bottom: -5px;
+      &.pl-flow {
+      }
+      &.inx-com {
+      }
+    }
+  }
+
+  &.flipped {
+    flex-direction: row;
+    .ff-image {
+      margin-left: -22%;
+      margin-right: $base-space * 2;
+      box-shadow: 2px 2px 60px #d8d8d8;
+    }
+  }
+  &.flopped {
+    flex-direction: row-reverse;
+    .ff-image {
+      margin-left: $base-space * 2;
+      margin-right: -22%;
+      box-shadow: -2px -2px 60px #d8d8d8;
+    }
+  }
+
+  .ff-text {
+    flex: 1;
+    min-width: 25%;
+    align-self: flex-start;
+    margin-top: $base-space;
+  }
+
+}

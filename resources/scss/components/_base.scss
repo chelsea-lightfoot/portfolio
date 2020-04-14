@@ -11,10 +11,10 @@ body {
 main {
   flex: 1;
   section {
-    margin-bottom: $base-space * 4;
+    margin-bottom: $base-space * 6;
     section {
       padding: 0;
-      margin-bottom: $base-space * 4;
+      margin-bottom: $base-space * 6;
     }
   }
 }
@@ -27,10 +27,10 @@ main {
 
 h2, h3, h4, h5, h6 {
   color: $accent2;
+  font-size: $base-font-size * 2.5;
   font-family: $display-font;
   font-weight: 400;
-  margin: 0 auto;
-  max-width: $text-width;
+  margin: 0;
 }
 
 h1 {
@@ -42,7 +42,8 @@ h1 {
 #home {
   h1 {
     color: $accent2;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    white-space: nowrap;
     @media only screen and (max-width: 810px) {
       font-size: 1.5rem;
     }
@@ -58,10 +59,8 @@ p, li {
   font-family: $body-reg;
   font-weight: 400;
   color: $dark-text-color;
-  margin: auto;
   margin-bottom: 20px;
   line-height: 26px;
-  max-width: $text-width;
   a {
     color: $accent2;
   }

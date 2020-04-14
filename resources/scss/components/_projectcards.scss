@@ -1,5 +1,4 @@
 #portfolio-gallery {
-  margin-top: 30px;
 
   .gallery-cards {
     display: grid;
@@ -35,15 +34,6 @@
 
       &.dashboards {
         background-image: url(../images/mocks/dash-prod-imc.png);
-      }
-      &.service-pages {
-        background-image: url(../images/mocks/com_imac-mobile.png);
-      }
-      &.product-details {
-        background-image: url(../images/mocks/pf_all_bwsr.png);
-      }
-      &.zippy-logo {
-        background-image: url(../images/mocks/zippy_logo.png);
       }
       &.sw-website {
         background-image: url(../images/mocks/sw_web_imac.png);
