@@ -34,20 +34,15 @@ h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.5rem;
+  color: $accent2;
+  font-size: 2rem;
+  white-space: nowrap;
   font-family: $display-font;
   font-weight: 400;
   margin: 0 auto;
-}
-#home {
-  h1 {
-    color: $accent2;
-    font-size: 2rem;
-    white-space: nowrap;
-    @media only screen and (max-width: 810px) {
-      font-size: 1.5rem;
-    }
-  }
+  //@media only screen and (max-width: 810px) {
+  //  font-size: 1.5rem;
+  //}
 }
 
 h2 {
@@ -59,7 +54,7 @@ p, li {
   font-family: $body-reg;
   font-weight: 400;
   color: $dark-text-color;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   line-height: 26px;
   a {
     color: $accent2;
@@ -94,10 +89,15 @@ a {
   @media only screen and (min-width: 600px) {
     &:hover {
       color: $accent1;
+      .fas {
+        color: $accent1;
+      }
     }
   }
 }
 
-.material-icons {
+.fas {
   font-size: 20px;
+  color: #9d74ae;
+  transition: color .25s;
 }

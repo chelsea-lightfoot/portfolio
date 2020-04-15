@@ -54,7 +54,8 @@
       padding: $base-space;
 
       i {
-        color: white;
+        color: $light-text-color;
+        opacity: .7;
         font-size: 60px;
       }
     }
@@ -88,7 +89,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  .material-icons {
+  .fas {
     font-size: 30px;
     text-shadow: 1px 1px 6px $lightbox-background;
   }

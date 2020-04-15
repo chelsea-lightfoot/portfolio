@@ -199,15 +199,15 @@ footer {
     padding-bottom: 30px;
     background-color: $accent2;
     width: 100%;
-    .material-icons {
-      font-size: 50px;
+    .fas {
+      font-size: 35px;
       color: $accent1;
       transition: color .25s;
     }
   }
   @media only screen and (min-width: 600px) {
     #back-to-top {
-      .material-icons {
+      .fas {
         &:hover {
           color: $light-text-color;
         }
