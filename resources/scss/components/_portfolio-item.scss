@@ -130,7 +130,6 @@
           }
           &.item3 {
             background-image: url(../images/process/dashes-sketch2.jpg);
-            grid-column: span 2;
           }
         }
       }
@@ -201,17 +200,13 @@
         .item-card {
           &.item1 {
             background-image: url(../images/process/empty-1.png);
-            grid-column: span 2;
-            grid-row: span 2;
             background-position: top center;
           }
           &.item2 {
             background-image: url(../images/process/empty-2.png);
-            grid-column: span 2;
           }
           &.item3 {
             background-image: url(../images/process/empty-3.png);
-            grid-column: span 2;
           }
         }
       }
@@ -229,86 +224,7 @@
           &.item2 {
             background-image: url(../images/mocks/empty-2_bwsr.png);
             background-position: top center;
-            grid-column: span 2;
             grid-row: span 2;
-          }
-        }
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      .top {
-        .full-image {
-          height: 350px;
-        }
-      }
-      .process {
-        #process-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-      .solution {
-        #solution-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-  //--------------------PRODUCT DETAILS FLOW--------------------
-  .pf {
-    .top {
-      .full-image {
-        background-image: url(../images/mocks/pf_all_bwsr.png);
-        height: 500px;
-      }
-    }
-
-    .process {
-      #process-gallery {
-        .item-card {
-          &.item1 {
-            background-image: url(../images/process/pf-flow.png);
-            background-position: top center;
-            grid-column: span 3;
-            grid-row: span 2;
-          }
-          &.item2 {
-            background-image: url(../images/process/pf-sketch6.jpg);
-          }
-          &.item3 {
-            background-image: url(../images/process/pf-sketch1.jpg);
-          }
-        }
-      }
-    }
-
-    .solution {
-      #solution-gallery {
-        .item-card {
-          &.item1 {
-            background-image: url(../images/mocks/pf_ov_bwsr.png);
-            grid-column: span 3;
-            grid-row: span 3;
-          }
-          &.item2 {
-            background-image: url(../images/mocks/pf_ov_mobile.png);
-            grid-column: unset;
-            grid-row: span 2;
-          }
-          &.item3 {
-            background-image: url(../images/mocks/pf_pdmnu_mobile.png);
           }
         }
       }
@@ -391,213 +307,6 @@
             background-image: url(../images/mocks/sw_edit_bwsr.png);
           }
         }
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      .top {
-        .full-image {
-          height: 350px;
-        }
-      }
-      .process {
-        #process-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-      .solution {
-        #solution-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  //--------------------ZIPPY--------------------
-  .zippy {
-    .top {
-      .full-image {
-        background-image: url(../images/mocks/zippy_logo.png);
-        height: 500px;
-      }
-    }
-
-    .process {
-      #process-gallery {
-        .item-card {
-          &.item1 {
-            background-image: url(../images/process/zippy-sketch3.jpg);
-            grid-column: span 2;
-            grid-row: span 2;
-          }
-          &.item2 {
-            background-image: url(../images/process/zippy-sketch1.jpg);
-          }
-          &.item3 {
-            background-image: url(../images/process/zippy-process.png);
-            grid-row: span 2;
-            background-position: bottom center;
-          }
-          &.item4 {
-            background-image: url(../images/process/zippy-sketch2.jpg);
-          }
-        }
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      .top {
-        .full-image {
-          height: 350px;
-        }
-      }
-      .process {
-        #process-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-      .solution {
-        #solution-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-  //--------------------INX.COM--------------------
-  .sp {
-    .top {
-      .full-image {
-        background-image: url(../images/mocks/com_imac-mobile.png);
-        height: 700px;
-      }
-    }
-
-    .process {
-      #process-gallery {
-        .item-card {
-          &.item1 {
-            background-image: url(../images/process/sp_wire-desktop.png);
-            background-position: top center;
-            grid-column: span 2;
-          }
-          &.item2 {
-            background-image: url(../images/process/sp_sketch2.jpg);
-            background-position: top center;
-          }
-          &.item3 {
-            background-image: url(../images/process/team-specs-smol.png);
-            background-position: top center;
-            grid-row: span 2;
-          }
-          &.item4 {
-            background-image: url(../images/process/old-website-flow.jpg);
-            grid-column: 2 / span 2;
-          }
-          &.item5 {
-            background-image: url(../images/process/news-thumb.png);
-          }
-        }
-      }
-    }
-
-    .solution {
-      #solution-gallery {
-        .item-card {
-          &.item1 {
-            background-image: url(../images/mocks/com-home_bwsr.png);
-            grid-column: span 2;
-            grid-row: span 2;
-          }
-          &.item2 {
-            background-image: url(../images/mocks/com-team_bwsr.png);
-          }
-          &.item3 {
-            background-image: url(../images/mocks/com-jobs_bwsr.png);
-          }
-          &.item4 {
-            background-image: url(../images/mocks/sp-icom_bwsr.png);
-            grid-column: span 2;
-            grid-row: span 2;
-          }
-          &.item5 {
-            background-image: url(../images/mocks/sp-page_mobile.png);
-          }
-          &.item6 {
-            background-image: url(../images/mocks/com-buzz_bwsr.png);
-          }
-        }
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      .top {
-        .full-image {
-          height: 350px;
-        }
-      }
-      .process {
-        #process-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-      .solution {
-        #solution-gallery {
-          .item-card {
-            &.item1, &.item2, &.item3, &.item4, &.item5, &.item6 {
-              grid-column: unset;
-              grid-row: unset;
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-  //--------------------ORACLE OF ITEMS--------------------
-  .oracle {
-    .top {
-      img {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 10px auto;
-      }
-    }
-
-    .solution {
-      img {
-        width: 90%;
-        height: auto;
-        display: block;
-        margin: 10px auto;
       }
     }
 
