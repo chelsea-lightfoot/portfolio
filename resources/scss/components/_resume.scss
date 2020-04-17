@@ -32,12 +32,11 @@
   }
   @media only screen and (max-width: 600px) {
     .download-link {
-      background-image: unset;
-      background-color: $accent1;
-      padding: 180px 0;
+      margin: -1px 0;
+      padding: 60px 0;
     }
     &:before, &:after {
-      display: none;
+      height: 60px;
     }
   }
 }

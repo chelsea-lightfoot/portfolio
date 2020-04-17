@@ -30,6 +30,19 @@
       }
     }
   }
+  @media only screen and (max-width: 600px) {
+    .lb-image {
+      img {
+        max-width: 1000px;
+      }
+      &.mobile {
+        img {
+          margin: auto;
+          max-width: 411px;
+        }
+      }
+    }
+  }
 }
 .lightbox-available {
   position: relative;
@@ -59,7 +72,7 @@
       i {
         color: $light-text-color;
         opacity: .7;
-        font-size: 60px;
+        font-size: $base-font-size * 3.75;
       }
     }
   }
@@ -78,6 +91,9 @@
   .limit-width {
     padding-right: 15px;
   }
+  header {
+    z-index: -1;
+  }
 }
 
 .close {
@@ -94,7 +110,7 @@
   opacity: .85;
   transition: opacity .25s;
   .fas {
-    font-size: 30px;
+    font-size: $base-font-size * 1.875;
     margin-top: -40px;
     margin-right: -40px;
   }
@@ -105,6 +121,16 @@
       .fas {
         color: $purple1;
       }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    right: 0;
+    width: 60px;
+    height: 60px;
+    .fas {
+      font-size: $base-font-size * 1.25;
+      margin-top: -25px;
+      margin-right: -25px;
     }
   }
 }

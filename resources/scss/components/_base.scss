@@ -19,6 +19,14 @@ main {
       margin-bottom: $base-space * 6;
     }
   }
+  @media only screen and (max-width: 880px) {
+    section {
+      margin-bottom: $base-space * 4;
+      section {
+        margin-bottom: $base-space * 4;
+      }
+    }
+  }
 }
 
 .limit-width {
@@ -37,18 +45,15 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   color: $accent2;
-  font-size: 2rem;
+  font-size: $base-font-size * 2;
   white-space: nowrap;
   font-family: $display-font;
   font-weight: 400;
   margin: 0 auto;
-  //@media only screen and (max-width: 810px) {
-  //  font-size: 1.5rem;
-  //}
 }
 
 h2 {
-  margin-bottom: $base-space;
+  margin-bottom: $base-space / 2;
 }
 
 p, li {
@@ -56,7 +61,7 @@ p, li {
   font-family: $body-reg;
   font-weight: 400;
   color: $dark-text-color;
-  margin: 0 0 20px 0;
+  margin: 0 0 $base-space 0;
   line-height: 26px;
   a {
     color: $accent2;
@@ -107,7 +112,7 @@ a {
 }
 
 .fas {
-  font-size: 20px;
+  font-size: $base-font-size * 1.25;
   color: #9d74ae;
   transition: color .25s;
 }

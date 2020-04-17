@@ -4,16 +4,12 @@
   }
 
   .intro {
-    background-color: $accent1;
-    padding: {
-      top: 90px;
-      bottom: 40px;
-    }
+    padding-top: 30px;
     margin-bottom: 0;
   }
   .face {
-    background-color: $accent1;
     margin-bottom: 120px;
+    background-color: $accent1;
 
     #photo-gallery {
       display: grid;
@@ -63,6 +59,15 @@
           background-size: 200%;
         }
       }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      background-image: linear-gradient(to right bottom, $light-background 49.9%, $accent1 50.1%);
+      margin-top: -30px;
+      margin-bottom: -60px;
+      height: 160px;
     }
 
     &:after {
