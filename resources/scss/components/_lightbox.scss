@@ -13,21 +13,24 @@
     overflow: auto;
     width: 100%;
     img {
-      width: 85%;
-      max-width: 1024px;
+      max-width: 2000px;
       height: auto;
       display: block;
-      margin: 30px auto;
-      box-shadow: 0 0 20px #491f5a;
     }
     &.mobile {
       img {
+        margin: 30px auto;
         max-width: 411px;
+        box-shadow: 0 0 20px #491f5a;
+      }
+    }
+    &.restricted {
+      img {
+        max-width: 100%;
       }
     }
   }
 }
-
 .lightbox-available {
   position: relative;
   cursor: pointer;
@@ -62,7 +65,6 @@
   }
   @media only screen and (min-width: 600px) {
     &:hover {
-      box-shadow: 4px 4px 8px #c4bbc7;
       .card-overlay {
         height: 100%;
       }
@@ -79,18 +81,30 @@
 }
 
 .close {
-  cursor: pointer;
   color: white;
   position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
+  top: 0;
+  right: 15px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(to left bottom, $accent1 49.9%, transparent 50.1%);
+  opacity: .85;
+  transition: opacity .25s;
   .fas {
     font-size: 30px;
-    text-shadow: 1px 1px 6px $lightbox-background;
+    margin-top: -40px;
+    margin-right: -40px;
+  }
+  @media only screen and (min-width: 600px) {
+    &:hover {
+      cursor: pointer !important;
+      opacity: 1;
+      .fas {
+        color: $purple1;
+      }
+    }
   }
 }
