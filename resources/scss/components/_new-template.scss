@@ -9,6 +9,7 @@
     flex: 3;
     overflow: hidden;
     position: relative;
+    height: 100%;
 
     img {
       max-width: 100%;
@@ -19,6 +20,7 @@
   .with-mobile {
     position: relative;
     padding-bottom: 30px;
+    height: 100%;
     .ff-mobile-image {
       position: absolute;
       bottom: 0;
@@ -47,6 +49,24 @@
     }
     p {
       transition: font-size .25s, margin-bottom .25s, line-height .25s;
+      &.instruction {
+        font-weight: 600;
+        font-size: $base-font-size * .8;
+        display: flex;
+        align-items: center;
+        span {
+          padding-right: 4px;
+        }
+        .fas {
+          font-size: 1rem;
+          color: unset;
+          transition: unset;
+          padding-left: 5px;
+        }
+        .mobile {
+          display: none;
+        }
+      }
     }
     a {
       display: flex;
@@ -92,8 +112,12 @@
     }
 
     .ff-text {
-      a {
-        flex-direction: row;
+      p {
+        &.instruction {
+          .fas {
+            transform: rotate(180deg);
+          }
+        }
       }
     }
   }
@@ -133,16 +157,20 @@
       flex: 2;
     }
 
+    .with-mobile {
+      min-height: 230px;
+    }
+
     .ff-text {
-      min-width: 200px;
+      min-width: 250px;
       margin-top: $base-space / 2;
       h2 {
-        font-size: $base-font-size * 1.4;
+        font-size: $base-font-size * 1.8;
         margin-bottom: 10px;
       }
       p {
         font-size: $base-font-size * .8;
-        line-height: 18px;
+        line-height: 22px;
         margin-bottom: 20px;
       }
       a {
@@ -161,17 +189,12 @@
     &.flipped {
       .with-mobile {
         margin-right: $base-space * 2;
-        .ff-mobile-image {
-
-        }
       }
     }
 
     &.flopped {
       .with-mobile {
         margin-left: $base-space * 2;
-        .ff-mobile-image {
-        }
       }
     }
 
@@ -184,13 +207,22 @@
     }
     .ff-text {
       margin-bottom: $base-space;
-      h2 {
-        font-size: $base-font-size * 1.8;
+      p {
+        &.instruction {
+          .desktop {
+            display: none;
+          }
+          .mobile {
+            display: inline;
+          }
+        }
       }
     }
 
     .with-mobile {
+      min-height: unset;
       .ff-mobile-image {
+        bottom: 0;
         min-width: 80px;
         min-height: 150px;
       }
