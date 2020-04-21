@@ -67,11 +67,6 @@ p, li {
     color: $accent2;
   }
 }
-.reversed {
-  p {
-  letter-spacing: .1px;
-  }
-}
 
 b {
   font-family: $body-reg;
@@ -100,7 +95,21 @@ a {
         color: $accent1;
       }
     }
-    &.reversed {
+  }
+}
+
+.fas {
+  font-size: $base-font-size * 1.25;
+  color: #9d74ae;
+  transition: color .25s;
+}
+
+.reversed {
+  p {
+    letter-spacing: .1px;
+  }
+  a {
+    @media only screen and (min-width: 600px) {
       &:hover {
         color: $purple1;
         .fas {
@@ -109,10 +118,4 @@ a {
       }
     }
   }
-}
-
-.fas {
-  font-size: $base-font-size * 1.25;
-  color: #9d74ae;
-  transition: color .25s;
 }

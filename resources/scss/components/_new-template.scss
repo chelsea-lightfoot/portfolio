@@ -272,6 +272,16 @@
     display: flex;
     align-items: center;
   }
+  a {
+    @media only screen and (min-width: 600px) {
+      &:hover {
+        color: $purple1;
+        .fas {
+          color: $purple1;
+        }
+      }
+    }
+  }
   .arrow-bar {
     display: flex;
     align-items: center;
