@@ -93,6 +93,44 @@
         }
       }
     }
+    .button {
+      display: block;
+      width: 100%;
+      margin-top: -20px;
+      p {
+        color: white;
+        background-color: $accent2;
+        text-align: center;
+        padding: 30px 10px;
+        font-size: $base-font-size * 1.5625;
+        line-height: 30px;
+        transition: background-color .25s;
+        margin: unset;
+      }
+      &:before {
+        content: '';
+        height: 20px;
+        display: block;
+        position: relative;
+        top: 20px;
+        background-image: linear-gradient(to top left, $transparent 48%, $light-background 50%);
+      }
+      &:after {
+        content: '';
+        height: 20px;
+        display: block;
+        position: relative;
+        bottom: 20px;
+        background-image: linear-gradient(to bottom right, $transparent 48%, $light-background 50%);
+      }
+      @media only screen and (min-width: 600px) {
+        &:hover {
+          p {
+            background-color: $accent1;
+          }
+        }
+      }
+    }
   }
 
   &.flipped {
@@ -235,11 +273,12 @@
     }
 
     &.flipped {
-      flex-direction: column-reverse;
+      flex-direction: column;
       .ff-image {
         margin-left: unset;
         margin-right: unset;
-        box-shadow: 2px 2px 30px #e4e4e4;
+        margin-bottom: $base-space / 2;
+        box-shadow: 2px 2px 15px #e4e4e4;
       }
       .with-mobile {
         .ff-mobile-image {
@@ -250,11 +289,12 @@
     }
 
     &.flopped {
-      flex-direction: column-reverse;
+      flex-direction: column;
       .ff-image {
         margin-left: unset;
         margin-right: unset;
-        box-shadow: -2px -2px 30px #e4e4e4;
+        margin-bottom: $base-space / 2;
+        box-shadow: -2px -2px 15px #e4e4e4;
       }
       .with-mobile {
         .ff-mobile-image {
