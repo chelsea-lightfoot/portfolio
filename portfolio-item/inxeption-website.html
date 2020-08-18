@@ -80,32 +80,38 @@
 <main>
     <section class="pf">
         <div class="limit-width">
-            <div class="flipflop-block flopped">
-                <div data-restrictsize="true" data-lburl="resources/images/unmocked/com-home.png" class="ff-image lightbox-available">
-                    <img src="../resources/images/cropped/com-home.png">
-                    <div class="card-overlay">
-                        <div class="card-text">
-                            <i class="fas fa-expand-alt"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="ff-text">
-                    <h2>Creating an Online Presence</h2>
-                    <p>I have worked diligently to improve and maintain Inxeption's online presence. My largest initiatives as Lead Designer have been better presentation of Inxeption's products and a full redesign of the home page.</p>
-                    <p class="instruction"><span class="desktop">Click</span><span class="mobile">Tap</span> the images for a larger view <i class="fas fa-angle-right"></i></p>
-                </div>
-            </div>
-            <div class="flipflop-block flipped">
-                <div class="with-mobile">
-                    <div data-restrictsize="true" data-lburl="resources/images/process/sp_wire-desktop.png" class="ff-image lightbox-available">
-                        <img src="../resources/images/cropped/com-sp_wire-desktop.png">
+            <div data-lburl="resources/images/unmocked/com-home.png" class="lightboxAvailable">
+                <div class="flipflop-block flopped">
+                    <div class="ff-image overlay-added">
+                        <img src="../resources/images/cropped/com-home.png">
                         <div class="card-overlay">
                             <div class="card-text">
                                 <i class="fas fa-expand-alt"></i>
                             </div>
                         </div>
                     </div>
-                    <div data-mobilesize="true" data-lburl="resources/images/process/sp_wire-mobile.png" class="ff-mobile-image lightbox-available">
+                    <div class="ff-text">
+                        <h2>Creating an Online Presence</h2>
+                        <p>I have worked diligently to improve and maintain Inxeption's online presence. My largest initiatives as Lead Designer have been better presentation of Inxeption's products and a full redesign of the home page.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--THIS BLOCK'S LIGHTBOX IS SET UP DIFFERENTLY TO ACCOMMODATE THE MOBILE VERSION-->
+            <!--Specifically the lightbox data for the desktop version is wrapped around both the main image and the text, but not the whole section, thus leaving the mobile version free to open in the lightbox as well. The hover effect is applied to the whole section, highlighting the text and the desktop preview but not the mobile preview.-->
+            <div class="flipflop-block flipped">
+                <div class="with-mobile">
+                    <div data-lburl="resources/images/process/sp_wire-desktop.png" class="lightboxAvailable">
+                        <div class="ff-image overlay-added">
+                            <img src="../resources/images/cropped/com-sp_wire-desktop.png">
+                            <div class="card-overlay">
+                                <div class="card-text">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-mobilesize="true" data-lburl="resources/images/process/sp_wire-mobile.png" class="ff-mobile-image lightboxAvailable overlay-added">
                         <img src="../resources/images/cropped/com-sp_wire-mobile.png">
                         <div class="card-overlay">
                             <div class="card-text">
@@ -115,23 +121,28 @@
                     </div>
                 </div>
                 <div class="ff-text">
-                    <h2>Audience and SEO Analysis</h2>
-                    <p>Marketing research showed that the customers were straight-foward industrial business owners, and SEO analysis showed that they weren't finding the information they needed. I proposed a simple design with only the highest priority information above the fold.</p>
-                    <!--<a data-restrictsize="true" data-lburl="resources/images/process/sp_wire-desktop.png" class="lightbox-available">Product Page Wireframe<i class="fas fa-angle-right"></i></a>-->
-                    <!--<a data-mobilesize="true" data-lburl="resources/images/process/sp_wire-mobile.png" class="lightbox-available">Mobile Version <i class="fas fa-angle-right"></i></a>-->
+                    <div data-lburl="resources/images/process/sp_wire-desktop.png" class="lightboxAvailable">
+                        <h2>Audience and SEO Analysis</h2>
+                        <p>Marketing research showed that the customers were straight-foward industrial business owners, and SEO analysis showed that they weren't finding the information they needed. I proposed a simple design with only the highest priority information above the fold.</p>
+                    </div>
                 </div>
             </div>
+
+            <!--THIS BLOCK'S LIGHTBOX IS SET UP DIFFERENTLY TO ACCOMMODATE THE MOBILE VERSION-->
+            <!--Specifically the lightbox data for the desktop version is wrapped around both the main image and the text, but not the whole section, thus leaving the mobile version free to open in the lightbox as well. The hover effect is applied to the whole section, highlighting the text and the desktop preview but not the mobile preview.-->
             <div class="flipflop-block flopped">
                 <div class="with-mobile">
-                    <div data-restrictsize="true" data-lburl="resources/images/unmocked/sp_desktop-full.png" class="ff-image lightbox-available">
-                        <img src="../resources/images/cropped/com-sp_desktop.png">
-                        <div class="card-overlay">
-                            <div class="card-text">
-                                <i class="fas fa-expand-alt"></i>
+                    <div data-lburl="resources/images/unmocked/sp_desktop-full.png" class="lightboxAvailable">
+                        <div class="ff-image overlay-added">
+                            <img src="../resources/images/cropped/com-sp_desktop.png">
+                            <div class="card-overlay">
+                                <div class="card-text">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div data-mobilesize="true" data-lburl="resources/images/unmocked/sp_mobile-full.png" class="ff-mobile-image lightbox-available">
+                    <div data-mobilesize="true" data-lburl="resources/images/unmocked/sp_mobile-full.png" class="ff-mobile-image lightboxAvailable overlay-added">
                         <img src="../resources/images/cropped/com-sp_mobile.png">
                         <div class="card-overlay">
                             <div class="card-text">
@@ -141,33 +152,38 @@
                     </div>
                 </div>
                 <div class="ff-text">
-                    <h2>Design AND Development</h2>
-                    <p>Not only have I designed the look and feel of the new product pages, I have also performed a majority of the development. I built a robust HTML and CSS template that is easy to duplicate and can withstand the large amount of content needed to appease the SEO requirements.</p>
-                    <!--<a data-restrictsize="true" data-lburl="resources/images/unmocked/sp_desktop-full.png" class="lightbox-available">Final Product Page <i class="fas fa-angle-right"></i></a>-->
-                    <!--<a data-mobilesize="true" data-lburl="resources/images/unmocked/sp_mobile-full.png" class="lightbox-available">Mobile Version <i class="fas fa-angle-right"></i></a>-->
-                </div>
-            </div>
-            <div class="flipflop-block flipped">
-                <div data-lburl="resources/images/process/team-specs.png" class="ff-image lightbox-available">
-                    <img src="../resources/images/cropped/com-specs.png">
-                    <div class="card-overlay">
-                        <div class="card-text">
-                            <i class="fas fa-expand-alt"></i>
-                        </div>
+                    <div data-lburl="resources/images/unmocked/sp_desktop-full.png" class="lightboxAvailable">
+                        <h2>Design AND Development</h2>
+                        <p>Not only have I designed the look and feel of the new product pages, I have also performed a majority of the development. I built a robust HTML and CSS template that is easy to duplicate and can withstand the large amount of content needed to appease the SEO requirements.</p>
                     </div>
                 </div>
-                <div class="ff-text">
-                    <h2>Pushing for Process</h2>
-                    <p>When given time I created detailed design specs for the junior developer to follow. My strong knowledge of CSS helps greatly in creating specs, as I am able to write out exactly what styles and  variables to use for each element.</p>
-                    <!--<a data-lburl="resources/images/process/team-specs.png" class="lightbox-available">View Specs <i class="fas fa-angle-right"></i></a>-->
+            </div>
+
+
+            <div data-lburl="resources/images/process/team-specs.png" class="lightboxAvailable">
+                <div class="flipflop-block flipped">
+                    <div class="ff-image overlay-added">
+                        <img src="../resources/images/cropped/com-specs.png">
+                        <div class="card-overlay">
+                            <div class="card-text">
+                                <i class="fas fa-expand-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ff-text">
+                        <h2>Pushing for Process</h2>
+                        <p>When given time I created detailed design specs for the junior developer to follow. My strong knowledge of CSS helps greatly in creating specs, as I am able to write out exactly what styles and  variables to use for each element.</p>
+                    </div>
                 </div>
             </div>
+
             <div class="no-image-no-flip">
                 <div class="ninf-text">
                     <h2>Development, deployment, and reception</h2>
-                    <p></p>
+                    <p>Our first major project, creating a series of pages for the myriad of services Inxeption offered, saw a dramatic improvement in our SEO and analytics. Even better, when new services were added it was a simple task for our junior web developer to take create new pages using the existing template. Unfortunately the homepage design was not implemented before the pandemic caused a considerable shift in company priorities, but it was well received throughout the design process.</p>
                 </div>
             </div>
+
         </div>
     </section>
 </main>

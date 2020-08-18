@@ -1,4 +1,4 @@
-#resume {
+.slash-block {
   margin-bottom: 0;
   &:before {
     content: '';
@@ -13,7 +13,7 @@
     background-image: linear-gradient(to right bottom, $accent1 49.9%, transparent 50.1%);
     height: 160px;
   }
-  .download-link {
+  .link {
     background-image: linear-gradient($accent1 100%, transparent 0%);
     text-align: center;
     padding: 90px 0;

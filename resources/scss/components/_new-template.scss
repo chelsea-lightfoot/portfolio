@@ -1,9 +1,6 @@
 .flipflop-block {
   display: flex;
   margin-bottom: $base-space * 6;
-  &:first-child {
-    margin-top: $base-space * 2;
-  }
 
   .ff-image {
     flex: 3;
@@ -80,6 +77,7 @@
         padding-left: 15px;
       }
       &.arrow-bar {
+        margin-bottom: $base-space * 2;
         i {
           padding-left: 10px;
           &:first-child {

@@ -1,32 +1,40 @@
 #lightbox {
   position: fixed;
+  overflow: auto;
   height: 100vh;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: $lightbox-background;
   .lb-image {
     overflow: auto;
-    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 100px);
     img {
-      max-width: 2000px;
+      width: 100%;
       height: auto;
       display: block;
+      box-shadow: 0 0 15px rgba(73, 31, 90, .5);
+      max-width: 1440px;
     }
     &.mobile {
       img {
-        margin: 30px auto;
         max-width: 411px;
-        box-shadow: 0 0 20px #491f5a;
       }
     }
-    &.restricted {
+    &.long-img {
+      width: auto;
       img {
-        max-width: 100%;
+        max-width: unset;
+        width: auto;
+        max-height: 82vh;
       }
     }
   }
@@ -44,7 +52,7 @@
     }
   }
 }
-.lightbox-available {
+.overlay-added {
   position: relative;
   cursor: pointer;
   .card-overlay {
@@ -98,21 +106,19 @@
 
 .close {
   color: white;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 15px;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to left bottom, $accent1 49.9%, transparent 50.1%);
   opacity: .85;
   transition: opacity .25s;
   .fas {
-    font-size: $base-font-size * 1.875;
-    margin-top: -40px;
-    margin-right: -40px;
+    font-size: $base-font-size * 1.5;
+    color: white;
   }
   @media only screen and (min-width: 600px) {
     &:hover {
