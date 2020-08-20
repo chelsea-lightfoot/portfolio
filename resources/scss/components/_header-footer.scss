@@ -192,7 +192,7 @@ footer {
   &:before {
     content: '';
     display: block;
-    background-image: linear-gradient(to top right, #9d74ae 50%, #fff 50%);
+    background-image: linear-gradient(to top right, #9d74ae 49.7%, #fff 50.1%);
     height: 160px;
   }
   #back-to-top {
@@ -226,6 +226,7 @@ footer {
     }
     &:before {
       height: 60px;
+      background-image: linear-gradient(to top right, #9d74ae 50%, #fff 51%);
     }
   }
 }

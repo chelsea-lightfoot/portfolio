@@ -3,15 +3,22 @@
   &:before {
     content: '';
     display: block;
-    background-image: linear-gradient(to left top, $accent1 49.9%, $light-background 50.1%);
+    background-image: linear-gradient(to left top, $accent1 49.7%, $light-background 50.1%);
     margin-top: 60px;
     height: 160px;
   }
   &:after {
     content: '';
     display: block;
-    background-image: linear-gradient(to right bottom, $accent1 49.9%, transparent 50.1%);
+    background-image: linear-gradient(to right bottom, $accent1 49.7%, transparent 50.1%);
     height: 160px;
+  }
+  &.home-prototype {
+    margin-top: -320px;
+    margin-bottom: $base-space * 4;
+  }
+  &.oracle-prototype {
+    margin-top: $base-space * -4;
   }
   .link {
     background-image: linear-gradient($accent1 100%, transparent 0%);
@@ -31,12 +38,24 @@
     }
   }
   @media only screen and (max-width: 600px) {
+    &:before {
+      background-image: linear-gradient(to left top, $accent1 49%, $light-background 50.1%);
+      height: 60px;
+    }
+    &:after {
+      background-image: linear-gradient(to right bottom, $accent1 49%, transparent 50.1%);
+      height: 60px;
+    }
+    &.oracle-prototype {
+      margin-top: $base-space * -2;
+    }
+    &.home-prototype {
+      margin-top: $base-space * -3;
+      margin-bottom: $base-space * 3;
+    }
     .download-link {
       margin: -1px 0;
       padding: 60px 0;
-    }
-    &:before, &:after {
-      height: 60px;
     }
   }
 }

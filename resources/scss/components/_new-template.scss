@@ -1,4 +1,12 @@
-.flipflop-block {
+.limit-width {
+  &:first-child {
+    .flipflop-block {
+      margin-top: $base-space * 2;
+    }
+  }
+}
+
+.flipflop-block, .no-image-no-flip {
   display: flex;
   margin-bottom: $base-space * 6;
 
@@ -33,7 +41,7 @@
     }
   }
 
-  .ff-text {
+  .ff-text, .ninf-text {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -46,85 +54,26 @@
     }
     p {
       transition: font-size .25s, margin-bottom .25s, line-height .25s;
-      &.instruction {
-        font-weight: 600;
-        font-size: $base-font-size * .8;
-        display: flex;
-        align-items: center;
-        span {
-          padding-right: 4px;
-        }
-        .fas {
-          font-size: 1rem;
-          color: unset;
-          transition: unset;
-          padding-left: 5px;
-        }
-        .mobile {
-          display: none;
-        }
-      }
     }
     a {
       display: flex;
       align-items: center;
+      margin-top: $base-space / 2;
       font-size: $base-font-size * 1.5625;
-      transition: font-size .25s;
-      color: #9d74ae;
+      transition: font-size .25s, color .25s;
+      color: $accent2;
       i {
-        font-size: $base-font-size * 2.1875;
-        transition: font-size .25s;
+        font-size: $base-font-size * 1.75;
+        transition: font-size .25s, margin-left .25s;
         padding-left: 15px;
-      }
-      &.arrow-bar {
-        margin-bottom: $base-space * 2;
-        i {
-          padding-left: 10px;
-          &:first-child {
-            padding-left: 0;
-          }
-        }
+        color: $accent1;
+        margin-left: 0;
       }
       @media only screen and (min-width: 600px) {
         &:hover {
           color: $accent1;
-        }
-      }
-    }
-    .button {
-      display: block;
-      width: 100%;
-      margin-top: -20px;
-      p {
-        color: white;
-        background-color: $accent2;
-        text-align: center;
-        padding: 30px 10px;
-        font-size: $base-font-size * 1.5625;
-        line-height: 30px;
-        transition: background-color .25s;
-        margin: unset;
-      }
-      &:before {
-        content: '';
-        height: 20px;
-        display: block;
-        position: relative;
-        top: 20px;
-        background-image: linear-gradient(to top left, $transparent 48%, $light-background 50%);
-      }
-      &:after {
-        content: '';
-        height: 20px;
-        display: block;
-        position: relative;
-        bottom: 20px;
-        background-image: linear-gradient(to bottom right, $transparent 48%, $light-background 50%);
-      }
-      @media only screen and (min-width: 600px) {
-        &:hover {
-          p {
-            background-color: $accent1;
+          i {
+            margin-left: 5px;
           }
         }
       }
@@ -149,16 +98,6 @@
         box-shadow: 0 0 15px #d8d8d8;
       }
     }
-
-    .ff-text {
-      p {
-        &.instruction {
-          .fas {
-            transform: rotate(180deg);
-          }
-        }
-      }
-    }
   }
 
   &.flopped {
@@ -179,18 +118,6 @@
         box-shadow: 0 0 15px #d8d8d8;
       }
     }
-
-    .ff-text {
-        a {
-          &.arrow-bar {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            i {
-              transform: rotate(180deg);
-            }
-          }
-        }
-    }
   }
 
   @media only screen and (max-width: 880px) {
@@ -203,7 +130,7 @@
       min-height: 230px;
     }
 
-    .ff-text {
+    .ff-text, .ninf-text {
       min-width: 250px;
       margin-top: $base-space / 2;
       h2 {
@@ -219,11 +146,6 @@
         font-size: $base-font-size;
         i {
           font-size: $base-font-size * 1.5;
-        }
-        &.arrow-bar {
-          i {
-            padding-left: 5px;
-          }
         }
       }
     }
@@ -243,22 +165,12 @@
   }
 
   @media only screen and (max-width: 600px) {
-    margin-bottom: $base-space * 3;
+    margin-bottom: $base-space * 2;
     &:first-child {
       margin-top: 0;
     }
-    .ff-text {
+    .ff-text, .ninf-text {
       margin-bottom: $base-space;
-      p {
-        &.instruction {
-          .desktop {
-            display: none;
-          }
-          .mobile {
-            display: inline;
-          }
-        }
-      }
     }
 
     .with-mobile {
@@ -304,6 +216,22 @@
   }
 }
 
+.add-hover {
+  @media only screen and (min-width: 600px) {
+    &:hover {
+      cursor: pointer;
+      .ff-text, .ninf-text {
+        a {
+          color: $accent1;
+          i {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .redirect {
   padding: $base-space;
   margin-bottom: $base-space * 2;
@@ -323,17 +251,6 @@
         .fas {
           color: $purple1;
         }
-      }
-    }
-  }
-  .arrow-bar {
-    display: flex;
-    align-items: center;
-    padding-left: 5px;
-    i {
-      padding-left: 2px;
-      &:first-child {
-        padding-left: 5px;
       }
     }
   }
