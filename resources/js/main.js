@@ -16,27 +16,35 @@ $(document).ready(function() {
         var image = $(this).css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
 
         var largeImage = $(this).data("lburl");
-        var isVideo = $(this).data("lbvideo");
+        var multiImage = $(this).data("multi");
         var origin = window.location.origin;
         var pathArray = window.location.pathname.split('/');
         var secondLevelPath = pathArray[1];
 
-        if ($(this).data('lburl')) {
-            if (origin === "http://localhost:63342") {
-                $('.lb-image').append($('<img src="' + origin + '/' + secondLevelPath + '/' + largeImage + '">'));
-            } else {
-                $('.lb-image').append($('<img src="' + origin + '/' + largeImage + '">'));
-            }
+        if (multiImage === true) {
+            $('#lightbox').addClass("multi-image");
+            var imageArray = $(this).data('lburl').split(',');
+
+            $.each(imageArray, function(index, url) {
+                if (origin === "http://localhost:63342") {
+                    $('.lb-container').append($('<div class="lb-image"><img src="' + origin + '/' + secondLevelPath + '/' + url + '"></div>'));
+                } else {
+                    $('.lb-container').append($('<div class="lb-image"><img src="' + origin + '/' + url + '"></div>'));
+                }
+            });
         } else {
-            $('.lb-image').append($('<img src="' + image + '">'));
+            if (origin === "http://localhost:63342") {
+                $('.lb-container').append($('<div class="lb-image"><img src="' + origin + '/' + secondLevelPath + '/' + largeImage + '"></div>'));
+            } else {
+                $('.lb-container').append($('<div class="lb-image"><img src="' + origin + '/' + largeImage + '"></div>'));
+            }
         }
-        if (isVideo === true) {
-            $('.lb-image').addClass("video");
-        }
+
         if ($(this).data('mobilesize') === true) {
             $('.lb-image').addClass('mobile');
         }
         if ($(this).data('longsize') === true) {
+            $('.lb-container').addClass('long-img');
             $('.lb-image').addClass('long-img');
         }
         if (lightBox.hasClass('view-image')) {
@@ -54,8 +62,9 @@ $(document).ready(function() {
         lightBox.css('display','none');
         $('body').removeClass('lb-open');
         lightBox.removeClass('view-image');
-        $('.lb-image img').remove('img');
+        $('.lb-container .lb-image').remove('.lb-image');
         $('.lb-image').removeClass('mobile').removeClass('long-img');
+        $('.lb-container').removeClass('long-img');
     };
 
     $('.close').on('click', close);
