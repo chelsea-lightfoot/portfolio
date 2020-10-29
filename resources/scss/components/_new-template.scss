@@ -96,6 +96,9 @@
       .ff-mobile-image {
         left: 70%;
         box-shadow: 0 0 15px #d8d8d8;
+        &.shadow-override {
+          box-shadow: 5px 5px 15px #d8d8d8;
+        }
       }
     }
   }
@@ -116,6 +119,9 @@
       .ff-mobile-image {
         right: 70%;
         box-shadow: 0 0 15px #d8d8d8;
+        &.shadow-override {
+          box-shadow: -5px 5px 15px #d8d8d8;
+        }
       }
     }
   }

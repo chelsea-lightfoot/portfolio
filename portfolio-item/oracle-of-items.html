@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="Chelsea Lightfoot - Designer"
           content="Chelsea Lightfoot has designed user experience and interfaces in web applications for over 5 years.">
     <title>Chelsea Lightfoot - UX / UI Design</title>
@@ -80,17 +80,32 @@
 <main>
     <section class="oracle">
         <div class="limit-width">
-            <div data-multi="true" data-lburl="resources/images/oracle/home.png,resources/images/oracle/coin.png,resources/images/oracle/item-card.png,resources/images/oracle/item-chest.png,resources/images/oracle/search.png,resources/images/oracle/login-modal.png" class="lightboxAvailable add-hover">
-                <div class="flipflop-block flopped">
-                    <div class="ff-image overlay-added">
-                        <img src="../resources/images/oracle/home.png">
+
+            <!--THIS BLOCK'S LIGHTBOX IS SET UP DIFFERENTLY TO ACCOMMODATE THE MOBILE VERSION-->
+            <!--Specifically the lightbox data for the desktop version is wrapped around both the main image and the text, but not the whole section, thus leaving the mobile version free to open in the lightbox as well. The hover effect is applied to the whole section, highlighting the text and the desktop preview but not the mobile preview.-->
+            <div class="flipflop-block flopped">
+                <div class="with-mobile">
+                    <div data-multi="true" data-lburl="resources/images/oracle/home.png,resources/images/oracle/coin.png,resources/images/oracle/item-card.png,resources/images/oracle/item-chest.png,resources/images/oracle/search.png,resources/images/oracle/login-modal.png" class="lightboxAvailable add-hover">
+                        <div class="ff-image overlay-added">
+                            <img src="../resources/images/oracle/home.png">
+                            <div class="card-overlay">
+                                <div class="card-text">
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-mobilesize="true" data-multi="true" data-lburl="resources/images/oracle/home_mobile.png,resources/images/oracle/coin_mobile.png,resources/images/oracle/item-card_mobile.png,resources/images/oracle/item-chest_mobile.png,resources/images/oracle/search_mobile.png,resources/images/oracle/login_mobile.png" class="ff-mobile-image shadow-override lightboxAvailable overlay-added">
+                        <img src="../resources/images/oracle/home_mobile.png">
                         <div class="card-overlay">
                             <div class="card-text">
                                 <i class="fas fa-expand-alt"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="ff-text">
+                </div>
+                <div class="ff-text">
+                    <div data-multi="true" data-lburl="resources/images/oracle/home.png,resources/images/oracle/coin.png,resources/images/oracle/item-card.png,resources/images/oracle/item-chest.png,resources/images/oracle/search.png,resources/images/oracle/login-modal.png" class="lightboxAvailable add-hover">
                         <h2>See a problem, solve a problem</h2>
                         <p>Over my years of playing Dungeons and Dragons I have noticed a problem - it is difficult to find items that both work well for players and maintain the balance of the game. When I found myself with some extra free time on my hands, I decided to solve this problem using a thorough human-centered design process.</p>
                     </div>
@@ -166,7 +181,7 @@
                 </div>
             </div>
 
-            <div data-lburl="resources/images/oracle/screen-mockups.png" class="lightboxAvailable add-hover">
+            <div data-multi="true" data-lburl="resources/images/oracle/screen-mockups.png,resources/images/oracle/so-many-screens.png" class="lightboxAvailable add-hover">
                 <div class="flipflop-block flipped">
                     <div class="ff-image overlay-added">
                         <img src="../resources/images/oracle/screen-mockups.png">
